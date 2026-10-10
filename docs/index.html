@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probabilistic Computing Lab — Stochastic Computing Paper Map</title>
+  <meta name="description" content="Interactive literature catalog for stochastic computing, bitstream arithmetic, invertible/p-bit logic, and related VLSI research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-surface: #0f172a;
+      --bg-surface-elevated: #1e293b;
+      --border: #334155;
+      --border-subtle: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent: #34d399;
+      --accent-glow: rgba(52, 211, 153, 0.15);
+      --accent-hover: #059669;
+      --emerald: #34d399;
+      --emerald-glow: rgba(52, 211, 153, 0.15);
+      --violet: #a78bfa;
+      --amber: #fbbf24;
+      --badge-bg: #1e293b;
+      --badge-text: #6ee7b7;
+      --card-highlight: rgba(52, 211, 153, 0.04);
+      --table-stripe: rgba(30, 41, 59, 0.4);
+      --row-hover: rgba(52, 211, 153, 0.08);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --border: #cbd5e1;
+      --border-subtle: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      --accent: #059669;
+      --accent-glow: rgba(2, 132, 199, 0.12);
+      --accent-hover: #047857;
+      --emerald: #059669;
+      --emerald-glow: rgba(5, 150, 105, 0.12);
+      --violet: #7c3aed;
+      --amber: #d97706;
+      --badge-bg: #d1fae5;
+      --badge-text: #047857;
+      --card-highlight: rgba(2, 132, 199, 0.03);
+      --table-stripe: #f8fafc;
+      --row-hover: rgba(2, 132, 199, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradient glow */
+    .ambient-glow {
+      position: fixed;
+      top: -220px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(52, 211, 153, 0.14) 0%, rgba(16, 185, 129, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    [data-theme="light"] header {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+    }
+
+    .brand-text h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      background: var(--bg-surface-elevated);
+    }
+
+    .nav-btn.primary {
+      background: var(--accent);
+      color: #04101e;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    [data-theme="light"] .nav-btn.primary {
+      color: #ffffff;
+    }
+
+    .nav-btn.primary:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Main layout */
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Hero Banner */
+    .hero {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--card-highlight);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--text) 40%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 860px;
+      line-height: 1.6;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      border-color: var(--border);
+      transform: translateY(-2px);
+    }
+
+    .stat-card .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-card .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .stat-card.emerald::after { background: var(--emerald); }
+    .stat-card.violet::after { background: var(--violet); }
+    .stat-card.amber::after { background: var(--amber); }
+
+    /* Search & Filter Toolbar */
+    .toolbar {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .filter-toggles {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip {
+      padding: 0.4rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .filter-chip:hover {
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .filter-chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #04101e;
+      font-weight: 600;
+    }
+
+    [data-theme="light"] .filter-chip.active {
+      color: #ffffff;
+    }
+
+    .categories-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 0.75rem;
+    }
+
+    .view-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .view-switchers {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .view-btn {
+      padding: 0.35rem 0.65rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .view-btn.active {
+      background: var(--bg-surface-elevated);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Papers Grid */
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .paper-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .paper-card:hover {
+      border-color: var(--border);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-top {
+      margin-bottom: 0.75rem;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+
+    .badge {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-year {
+      background: var(--bg-surface-elevated);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .badge-category {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+    }
+
+    .badge-work {
+      background: var(--emerald-glow);
+      color: var(--emerald);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .badge-analysis {
+      background: rgba(167, 139, 250, 0.15);
+      color: var(--violet);
+    }
+
+    .paper-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+    }
+
+    .paper-authors {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .paper-venue {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-btn {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .card-btn:hover {
+      color: var(--accent);
+      background: var(--card-highlight);
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 760px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: var(--text);
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+      padding-right: 1.5rem;
+    }
+
+    .modal-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 0.82rem;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+    }
+
+    .bibtex-box {
+      background: var(--bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      overflow-x: auto;
+      white-space: pre-wrap;
+      margin: 1rem 0;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .hero h2 { font-size: 1.75rem; }
+      .papers-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">P</div>
+        <div class="brand-text">
+          <h1>Probabilistic Computing Lab</h1>
+          <p>Stochastic Computing Literature Catalog</p>
+        </div>
+      </a>
+      <div class="nav-links">
+        <button class="nav-btn" id="theme-toggle" title="Toggle theme">
+          <span id="theme-icon">&#9790;</span> <span id="theme-text">Dark</span>
+        </button>
+        <a href="https://github.com/Probabilistic-Computing/probabilistic-computing-lab" target="_blank" class="nav-btn primary">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          GitHub Repository
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge">&bull; Research-as-Code &bull; Living Laboratory</div>
+      <h2>Stochastic & Probabilistic Computing Literature Map</h2>
+      <p>
+        A curated catalog of <strong>100+ stochastic / probabilistic computing papers</strong> from IEEE TVLSI, TCAS, TCAD, and JSSC — with structured analysis dossiers and DOI-linked publisher pages.
+      </p>
+    </section>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" id="stat-total">--</div>
+        <div class="stat-label">Total Curated Papers</div>
+      </div>
+      <div class="stat-card emerald">
+        <div class="stat-number" id="stat-work">--</div>
+        <div class="stat-label">Mirrored PDFs (lab)</div>
+      </div>
+      <div class="stat-card violet">
+        <div class="stat-number" id="stat-analysis">--</div>
+        <div class="stat-label">Analysis Dossiers (`papers/sc/`)</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-number" id="stat-categories">--</div>
+        <div class="stat-label">Core Research Domains</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="search-row">
+        <div class="search-box">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" id="search-input" placeholder="Search by title, author, venue, keyword, or slug...">
+        </div>
+        <div class="filter-toggles">
+          <span class="filter-chip" id="filter-work" data-toggle="work">&check; Has PDF</span>
+          <span class="filter-chip" id="filter-analysis" data-toggle="analysis">&check; Analysis Dossiers</span>
+          <span class="filter-chip" id="filter-oa" data-toggle="oa">&check; Open Access / PDF</span>
+        </div>
+      </div>
+      <div class="categories-row" id="categories-container">
+        <!-- Generated category chips -->
+      </div>
+    </div>
+
+    <!-- Results Header -->
+    <div class="view-controls">
+      <div>Showing <strong id="results-count">0</strong> papers</div>
+      <div class="view-switchers">
+        <select id="sort-select" class="nav-btn" style="padding: 0.35rem 0.5rem;">
+          <option value="year-desc">Year (Newest &rarr; Oldest)</option>
+          <option value="year-asc">Year (Oldest &rarr; Newest)</option>
+          <option value="title-asc">Title (A &rarr; Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Papers Grid Container -->
+    <div class="papers-grid" id="papers-grid">
+      <!-- Generated paper cards -->
+    </div>
+  </main>
+
+  <!-- Modal for Paper Details -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2026 <strong>Probabilistic Computing Lab</strong> &bull;
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </p>
+  </footer>
+
+  <script>
+    // State management
+    let papersData = [];
+    let activeCategory = "All";
+    let filterWork = false;
+    let filterAnalysis = false;
+    let filterOA = false;
+    let searchQuery = "";
+    let sortOption = "year-desc";
+
+    // Theme Management
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const themeText = document.getElementById("theme-text");
+
+    function initTheme() {
+      const saved = localStorage.getItem("pc_theme") || "dark";
+      setTheme(saved);
+    }
+
+    function setTheme(theme) {
+      if (theme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeIcon.innerHTML = "&#9788;";
+        themeText.innerText = "Light";
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+        themeIcon.innerHTML = "&#9790;";
+        themeText.innerText = "Dark";
+      }
+      localStorage.setItem("pc_theme", theme);
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      setTheme(isLight ? "dark" : "light");
+    });
+
+    // Fetch and Initialize Data
+    async function loadDataset() {
+      try {
+        const res = await fetch("papers.json");
+        if (!res.ok) throw new Error("Failed to load papers.json");
+        const json = await res.json();
+        
+        papersData = json.papers || [];
+        updateStats(json.metadata);
+        buildCategoryChips(json.metadata.categories);
+        renderPapers();
+      } catch (err) {
+        console.error("Error loading papers.json:", err);
+        document.getElementById("papers-grid").innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
+            <h3>Could not load literature data</h3>
+            <p>Ensure <code>docs/papers.json</code> exists.</p>
+          </div>
+        `;
+      }
+    }
+
+    function updateStats(meta) {
+      if (!meta) return;
+      document.getElementById("stat-total").innerText = meta.total_papers || papersData.length;
+      document.getElementById("stat-work").innerText = meta.mirrored_pdfs || 0;
+      document.getElementById("stat-analysis").innerText = meta.dossiers_with_analysis || 0;
+      document.getElementById("stat-categories").innerText = Object.keys(meta.categories || {}).length;
+    }
+
+    function buildCategoryChips(categories) {
+      const container = document.getElementById("categories-container");
+      container.innerHTML = "";
+
+      const allChip = document.createElement("span");
+      allChip.className = "filter-chip active";
+      allChip.innerText = `All (${papersData.length})`;
+      allChip.addEventListener("click", () => {
+        document.querySelectorAll(".categories-row .filter-chip").forEach(c => c.classList.remove("active"));
+        allChip.classList.add("active");
+        activeCategory = "All";
+        renderPapers();
+      });
+      container.appendChild(allChip);
+
+      for (const [cat, count] of Object.entries(categories || {})) {
+        const chip = document.createElement("span");
+        chip.className = "filter-chip";
+        chip.innerText = `${cat} (${count})`;
+        chip.addEventListener("click", () => {
+          document.querySelectorAll(".categories-row .filter-chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          activeCategory = cat;
+          renderPapers();
+        });
+        container.appendChild(chip);
+      }
+    }
+
+    // Filter and Sort Logic
+    function getFilteredPapers() {
+      const q = searchQuery.trim().toLowerCase();
+
+      return papersData.filter(p => {
+        if (activeCategory !== "All" && p.category !== activeCategory) return false;
+        if (filterWork && !p.has_pdf) return false;
+        if (filterAnalysis && !p.has_analysis) return false;
+        if (filterOA && !p.has_pdf && !p.oa_status) return false;
+
+        if (q) {
+          const matchTitle = (p.title || "").toLowerCase().includes(q);
+          const matchAuthors = (p.authors || "").toLowerCase().includes(q);
+          const matchVenue = (p.venue || "").toLowerCase().includes(q);
+          const matchScope = (p.scope || "").toLowerCase().includes(q);
+          const matchSlug = (p.slug || "").toLowerCase().includes(q);
+          const matchYear = String(p.year).includes(q);
+          if (!matchTitle && !matchAuthors && !matchVenue && !matchScope && !matchSlug && !matchYear) {
+            return false;
+          }
+        }
+        return true;
+      }).sort((a, b) => {
+        if (sortOption === "year-desc") return b.year - a.year || a.title.localeCompare(b.title);
+        if (sortOption === "year-asc") return a.year - b.year || a.title.localeCompare(b.title);
+        if (sortOption === "title-asc") return a.title.localeCompare(b.title);
+        return 0;
+      });
+    }
+
+    function renderPapers() {
+      const filtered = getFilteredPapers();
+      document.getElementById("results-count").innerText = filtered.length;
+
+      const grid = document.getElementById("papers-grid");
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 4rem 1rem; color: var(--text-dim);">
+            <h3>No matching research papers found</h3>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Try clearing your search query or selecting a different filter category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="paper-card" onclick="openModal('${p.id}')">
+          <div class="card-top">
+            <div class="card-tags">
+              <span class="badge badge-year">${p.year}</span>
+              <span class="badge badge-category">${p.category}</span>
+              ${p.has_pdf ? `<span class="badge badge-work">&check; PDF</span>` : ''}
+              ${p.has_analysis ? `<span class="badge badge-analysis">Dossier</span>` : ''}
+            </div>
+            <div class="paper-title">${escapeHtml(p.title)}</div>
+            <div class="paper-authors">${escapeHtml(p.authors || 'Authors unlisted')}</div>
+            <div class="paper-venue">${escapeHtml(p.venue || p.scope || 'Probabilistic Computing Literature')}</div>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <div style="display: flex; gap: 0.4rem;">
+              ${p.url ? `<a href="${p.url}" target="_blank" class="card-btn" title="View Source/DOI">&nearr; Source</a>` : ''}
+              ${p.has_analysis ? `<a href="${p.github_dossier}" target="_blank" class="card-btn" title="GitHub Analysis Dossier">&para; Dossier</a>` : ''}
+              
+            </div>
+            <button class="card-btn" onclick="openModal('${p.id}')" style="background: var(--bg-surface-elevated); cursor: pointer;">Details &rarr;</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // Modal Details
+    const modalBackdrop = document.getElementById("modal-backdrop");
+    const modalClose = document.getElementById("modal-close");
+    const modalContent = document.getElementById("modal-content");
+
+    function openModal(paperId) {
+      const paper = papersData.find(p => p.id === paperId);
+      if (!paper) return;
+
+      const bibtex = generateBibTeX(paper);
+
+      modalContent.innerHTML = `
+        <div class="card-tags" style="margin-bottom: 0.75rem;">
+          <span class="badge badge-year">${paper.year}</span>
+          <span class="badge badge-category">${paper.category}</span>
+          ${paper.has_pdf ? `<span class="badge badge-work">&check; Mirrored PDF</span>` : ''}
+          ${paper.has_analysis ? `<span class="badge badge-analysis">Analysis Dossier</span>` : ''}
+        </div>
+        <h3 class="modal-title">${escapeHtml(paper.title)}</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.5rem;">
+          <strong>Authors:</strong> ${escapeHtml(paper.authors || 'Not listed')}
+        </p>
+        <p style="color: var(--text-dim); font-size: 0.82rem; font-style: italic;">
+          <strong>Venue:</strong> ${escapeHtml(paper.venue || 'N/A')}
+        </p>
+
+        <div class="modal-meta-grid">
+          <div class="meta-item">
+            <strong>Sub-Domain / Scope</strong>
+            <span>${escapeHtml(paper.scope || paper.category)}</span>
+          </div>
+          <div class="meta-item">
+            <strong>Repository Slug</strong>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">${paper.slug}</span>
+          </div>
+          <div class="meta-item">
+            <strong>DOI</strong>
+            <span>${paper.doi ? `<a href="https://doi.org/${paper.doi}" target="_blank" style="color: var(--accent);">${escapeHtml(paper.doi)}</a>` : 'Not indexed'}</span>
+          </div>
+          <div class="meta-item">
+            <strong>Local PDF</strong>
+            <span>${paper.has_pdf ? '<span style="color: var(--emerald);">Available under papers/sc/</span>' : 'Not mirrored'}</span>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+          <strong style="font-size: 0.8rem; color: var(--text-muted);">BibTeX Citation</strong>
+          <button class="nav-btn" style="padding: 0.25rem 0.5rem; font-size: 0.72rem;" onclick="copyBibTeX()">Copy BibTeX</button>
+        </div>
+        <div class="bibtex-box" id="bibtex-text">${escapeHtml(bibtex)}</div>
+
+        <div class="modal-actions">
+          ${paper.url ? `<a href="${paper.url}" target="_blank" class="nav-btn primary">&nearr; View Publisher / DOI</a>` : ''}
+          ${paper.github_dossier ? `<a href="${paper.github_dossier}" target="_blank" class="nav-btn">&para; Open Dossier in GitHub</a>` : ''}
+          ${paper.github_dossier ? `<a href="${paper.github_dossier}" target="_blank" class="nav-btn" style="border-color: var(--emerald); color: var(--emerald);">Open paper folder</a>` : ''}
+        </div>
+      `;
+
+      modalBackdrop.classList.add("open");
+    }
+
+    function generateBibTeX(p) {
+      const firstAuthor = (p.authors || "PCLab").split(";")[0].split(",")[0].replace(/[^A-Za-z]/g, "");
+      const citeKey = `${firstAuthor.toLowerCase()}${p.year}${p.slug.split("-")[0]}`;
+      return `@article{${citeKey},
+  title     = {${p.title}},
+  author    = {${p.authors || "Unknown"}},
+  journal   = {${p.venue || "IEEE"}},
+  year      = {${p.year}},
+  doi       = {${p.doi || ""}}
+}`;
+    }
+
+    function copyBibTeX() {
+      const text = document.getElementById("bibtex-text").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("BibTeX copied to clipboard!");
+      });
+    }
+
+    modalClose.addEventListener("click", () => modalBackdrop.classList.remove("open"));
+    modalBackdrop.addEventListener("click", (e) => {
+      if (e.target === modalBackdrop) modalBackdrop.classList.remove("open");
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") modalBackdrop.classList.remove("open");
+    });
+
+    // Event Listeners for Filters
+    document.getElementById("search-input").addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderPapers();
+    });
+
+    document.getElementById("sort-select").addEventListener("change", (e) => {
+      sortOption = e.target.value;
+      renderPapers();
+    });
+
+    document.getElementById("filter-work").addEventListener("click", function() {
+      filterWork = !filterWork;
+      this.classList.toggle("active", filterWork);
+      renderPapers();
+    });
+
+    document.getElementById("filter-analysis").addEventListener("click", function() {
+      filterAnalysis = !filterAnalysis;
+      this.classList.toggle("active", filterAnalysis);
+      renderPapers();
+    });
+
+    document.getElementById("filter-oa").addEventListener("click", function() {
+      filterOA = !filterOA;
+      this.classList.toggle("active", filterOA);
+      renderPapers();
+    });
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Initialize
+    initTheme();
+    loadDataset();
+  </script>
+</body>
+</html>
