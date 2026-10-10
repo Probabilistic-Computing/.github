@@ -615,6 +615,29 @@
       margin-bottom: 0.15rem;
     }
 
+    .modal-abstract {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent);
+    }
+
+    .modal-abstract strong {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+    }
+
+    .modal-abstract p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+
     .bibtex-box {
       background: var(--bg);
       border: 1px solid var(--border-subtle);
@@ -673,9 +696,9 @@
         <button class="nav-btn" id="theme-toggle" title="Toggle theme">
           <span id="theme-icon">&#9790;</span> <span id="theme-text">Dark</span>
         </button>
-        <a href="https://github.com/Probabilistic-Computing/probabilistic-computing-lab" target="_blank" class="nav-btn primary">
+        <a href="https://github.com/Probabilistic-Computing/.github" target="_blank" class="nav-btn primary">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-          GitHub Repository
+          GitHub
         </a>
       </div>
     </div>
@@ -686,7 +709,7 @@
       <div class="hero-badge">&bull; Research-as-Code &bull; Living Laboratory</div>
       <h2>Stochastic & Probabilistic Computing Literature Map</h2>
       <p>
-        A curated catalog of <strong>100+ stochastic / probabilistic computing papers</strong> from IEEE TVLSI, TCAS, TCAD, and JSSC — with structured analysis dossiers and DOI-linked publisher pages.
+        A curated catalog of <strong>100+ stochastic / probabilistic computing papers</strong> from IEEE TVLSI, TCAS, TCAD, and JSSC — with publisher abstracts and DOI-linked source pages.
       </p>
     </section>
 
@@ -698,11 +721,11 @@
       </div>
       <div class="stat-card emerald">
         <div class="stat-number" id="stat-work">--</div>
-        <div class="stat-label">Mirrored PDFs (lab)</div>
+        <div class="stat-label">With Publisher Abstract</div>
       </div>
       <div class="stat-card violet">
         <div class="stat-number" id="stat-analysis">--</div>
-        <div class="stat-label">Analysis Dossiers (`papers/sc/`)</div>
+        <div class="stat-label">Structured Analysis Notes</div>
       </div>
       <div class="stat-card amber">
         <div class="stat-number" id="stat-categories">--</div>
@@ -715,12 +738,12 @@
       <div class="search-row">
         <div class="search-box">
           <span class="search-icon">&#128269;</span>
-          <input type="text" id="search-input" placeholder="Search by title, author, venue, keyword, or slug...">
+          <input type="text" id="search-input" placeholder="Search by title, author, abstract, venue, keyword, or slug...">
         </div>
         <div class="filter-toggles">
-          <span class="filter-chip" id="filter-work" data-toggle="work">&check; Has PDF</span>
-          <span class="filter-chip" id="filter-analysis" data-toggle="analysis">&check; Analysis Dossiers</span>
-          <span class="filter-chip" id="filter-oa" data-toggle="oa">&check; Open Access / PDF</span>
+          <span class="filter-chip" id="filter-work" data-toggle="work">&check; Has Abstract</span>
+          <span class="filter-chip" id="filter-analysis" data-toggle="analysis">&check; Analysis Notes</span>
+          <span class="filter-chip" id="filter-oa" data-toggle="oa">&check; Has DOI</span>
         </div>
       </div>
       <div class="categories-row" id="categories-container">
@@ -826,7 +849,7 @@
     function updateStats(meta) {
       if (!meta) return;
       document.getElementById("stat-total").innerText = meta.total_papers || papersData.length;
-      document.getElementById("stat-work").innerText = meta.mirrored_pdfs || 0;
+      document.getElementById("stat-work").innerText = meta.with_abstract ?? papersData.filter(p => (p.abstract || "").trim()).length;
       document.getElementById("stat-analysis").innerText = meta.dossiers_with_analysis || 0;
       document.getElementById("stat-categories").innerText = Object.keys(meta.categories || {}).length;
     }
@@ -866,9 +889,9 @@
 
       return papersData.filter(p => {
         if (activeCategory !== "All" && p.category !== activeCategory) return false;
-        if (filterWork && !p.has_pdf) return false;
+        if (filterWork && !(p.abstract || "").trim()) return false;
         if (filterAnalysis && !p.has_analysis) return false;
-        if (filterOA && !p.has_pdf && !p.oa_status) return false;
+        if (filterOA && !p.doi) return false;
 
         if (q) {
           const matchTitle = (p.title || "").toLowerCase().includes(q);
@@ -876,8 +899,9 @@
           const matchVenue = (p.venue || "").toLowerCase().includes(q);
           const matchScope = (p.scope || "").toLowerCase().includes(q);
           const matchSlug = (p.slug || "").toLowerCase().includes(q);
+          const matchAbstract = (p.abstract || "").toLowerCase().includes(q);
           const matchYear = String(p.year).includes(q);
-          if (!matchTitle && !matchAuthors && !matchVenue && !matchScope && !matchSlug && !matchYear) {
+          if (!matchTitle && !matchAuthors && !matchVenue && !matchScope && !matchSlug && !matchAbstract && !matchYear) {
             return false;
           }
         }
@@ -911,8 +935,8 @@
             <div class="card-tags">
               <span class="badge badge-year">${p.year}</span>
               <span class="badge badge-category">${p.category}</span>
-              ${p.has_pdf ? `<span class="badge badge-work">&check; PDF</span>` : ''}
-              ${p.has_analysis ? `<span class="badge badge-analysis">Dossier</span>` : ''}
+              ${(p.abstract || '').trim() ? `<span class="badge badge-work">&check; Abstract</span>` : ''}
+              ${p.has_analysis ? `<span class="badge badge-analysis">Analysis</span>` : ''}
             </div>
             <div class="paper-title">${escapeHtml(p.title)}</div>
             <div class="paper-authors">${escapeHtml(p.authors || 'Authors unlisted')}</div>
@@ -921,8 +945,6 @@
           <div class="card-actions" onclick="event.stopPropagation()">
             <div style="display: flex; gap: 0.4rem;">
               ${p.url ? `<a href="${p.url}" target="_blank" class="card-btn" title="View Source/DOI">&nearr; Source</a>` : ''}
-              ${p.has_analysis ? `<a href="${p.github_dossier}" target="_blank" class="card-btn" title="GitHub Analysis Dossier">&para; Dossier</a>` : ''}
-              
             </div>
             <button class="card-btn" onclick="openModal('${p.id}')" style="background: var(--bg-surface-elevated); cursor: pointer;">Details &rarr;</button>
           </div>
@@ -941,12 +963,16 @@
 
       const bibtex = generateBibTeX(paper);
 
+      const abstractHtml = (paper.abstract || "").trim()
+        ? `<div class="modal-abstract"><strong>Abstract</strong><p>${escapeHtml(paper.abstract)}</p></div>`
+        : `<div class="modal-abstract"><strong>Abstract</strong><p style="font-style: italic;">Not available in catalog.</p></div>`;
+
       modalContent.innerHTML = `
         <div class="card-tags" style="margin-bottom: 0.75rem;">
           <span class="badge badge-year">${paper.year}</span>
           <span class="badge badge-category">${paper.category}</span>
-          ${paper.has_pdf ? `<span class="badge badge-work">&check; Mirrored PDF</span>` : ''}
-          ${paper.has_analysis ? `<span class="badge badge-analysis">Analysis Dossier</span>` : ''}
+          ${(paper.abstract || '').trim() ? `<span class="badge badge-work">&check; Abstract</span>` : ''}
+          ${paper.has_analysis ? `<span class="badge badge-analysis">Analysis</span>` : ''}
         </div>
         <h3 class="modal-title">${escapeHtml(paper.title)}</h3>
         <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.5rem;">
@@ -956,22 +982,26 @@
           <strong>Venue:</strong> ${escapeHtml(paper.venue || 'N/A')}
         </p>
 
+        ${abstractHtml}
+
+        ${paper.innovation ? `<p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.75rem 0;"><strong style="color: var(--text-dim); font-size: 0.72rem; text-transform: uppercase; display: block; margin-bottom: 0.25rem;">Key Idea</strong>${escapeHtml(paper.innovation)}</p>` : ''}
+
         <div class="modal-meta-grid">
           <div class="meta-item">
             <strong>Sub-Domain / Scope</strong>
             <span>${escapeHtml(paper.scope || paper.category)}</span>
           </div>
           <div class="meta-item">
-            <strong>Repository Slug</strong>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">${paper.slug}</span>
+            <strong>Catalog Slug</strong>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">${escapeHtml(paper.slug)}</span>
           </div>
           <div class="meta-item">
             <strong>DOI</strong>
             <span>${paper.doi ? `<a href="https://doi.org/${paper.doi}" target="_blank" style="color: var(--accent);">${escapeHtml(paper.doi)}</a>` : 'Not indexed'}</span>
           </div>
           <div class="meta-item">
-            <strong>Local PDF</strong>
-            <span>${paper.has_pdf ? '<span style="color: var(--emerald);">Available under papers/sc/</span>' : 'Not mirrored'}</span>
+            <strong>Journal</strong>
+            <span>${escapeHtml(paper.journal || paper.venue || 'N/A')}</span>
           </div>
         </div>
 
@@ -983,8 +1013,6 @@
 
         <div class="modal-actions">
           ${paper.url ? `<a href="${paper.url}" target="_blank" class="nav-btn primary">&nearr; View Publisher / DOI</a>` : ''}
-          ${paper.github_dossier ? `<a href="${paper.github_dossier}" target="_blank" class="nav-btn">&para; Open Dossier in GitHub</a>` : ''}
-          ${paper.github_dossier ? `<a href="${paper.github_dossier}" target="_blank" class="nav-btn" style="border-color: var(--emerald); color: var(--emerald);">Open paper folder</a>` : ''}
         </div>
       `;
 

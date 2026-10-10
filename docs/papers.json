@@ -1,16 +1,17 @@
 {
   "metadata": {
     "title": "Probabilistic Computing Lab — Stochastic Computing Paper Map",
-    "repository": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab",
+    "repository": "https://github.com/Probabilistic-Computing/.github",
     "organization": "https://github.com/Probabilistic-Computing",
     "total_papers": 105,
     "reproducible_baselines": 0,
-    "dossiers_with_analysis": 9,
+    "dossiers_with_analysis": 10,
     "mirrored_pdfs": 68,
+    "with_abstract": 105,
     "categories": {
       "Neural Networks & Learning": 37,
-      "Stochastic Arithmetic & Circuits": 19,
-      "Coding & Communications": 18,
+      "Stochastic Arithmetic & Circuits": 20,
+      "Coding & Communications": 17,
       "DSP & Imaging": 10,
       "Number Generators": 7,
       "Fault Tolerance & Reliability": 6,
@@ -32,7 +33,7 @@
       "2025": 14,
       "2026": 10
     },
-    "updated_at": "2026-10-10"
+    "updated_at": "2026-10-11"
   },
   "papers": [
     {
@@ -51,14 +52,13 @@
       ],
       "scope": "Digital image processing",
       "innovation": "Maps FSM-based stochastic computational elements (SCEs) onto five classical digital image processing kernels and compares them to binary-radix designs.",
+      "abstract": "Maintaining the reliability of integrated circuits as transistor sizes continue to shrink to nanoscale dimensions is a significant looming challenge for the industry. Computation on stochastic bit streams, which could replace conventional deterministic computation based on a binary radix, allows similar computation to be performed more reliably and often with less hardware area. Prior work discussed a variety of specific stochastic computational elements (SCEs) for applications such as artificial neural networks and control systems. Recently, very promising new SCEs have been developed based on finite-state machines (FSMs). In this paper, we introduce new SCEs based on FSMs for the task of digital image processing. We present five digital image processing algorithms as case studies of practical applications of the technique. We compare the error tolerance, hardware area, and latency of stochastic implementations to those of conventional deterministic implementations using binary radix encoding. We also provide a rigorous analysis of a particular function, namely the stochastic linear gain function, which had only been validated experimentally in prior work.",
       "doi": "10.1109/TVLSI.2013.2247429",
       "url": "https://doi.org/10.1109/TVLSI.2013.2247429",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2014_computation-on-stochastic-bit-streams-digital-image-processing-case-studies",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-2",
@@ -76,14 +76,13 @@
       ],
       "scope": "Error correction",
       "innovation": "First silicon-proven multi-rate stochastic LDPC decoder for IEEE 802.15.3c (rates 1/2, 5/8, 3/4, 7/8; n=672).",
+      "abstract": "This paper presents the first silicon-proven stochastic LDPC decoder to support multiple code rates for IEEE 802.15.3c applications. The critical path is improved by a reconfigurable stochastic check node unit (CNU) and variable node unit (VNU); therefore, a high throughput scheme can be realized with 768 MHz clock frequency. To achieve higher hardware and energy efficiency, the reduced complexity architecture of tracking forecast memory is experimentally investigated to implement the variable node units for IEEE 802.15.3c applications. Based on the properties of parity check matrices and stochastic arithmetic, the optimized routing networks with re-permutation techniques are adopted to enhance chip utilization. Considering the measurement uncertainties, a delay-lock loop with isolated power domain and a test environment consisting of an encoder, an AWGN generator and bypass circuits are also designed for inner clock and information generation. With these features, our proposed fully parallel LDPC decoder chip fabricated in 90-nm CMOS process with 760.3 K gate count can achieve 7.92 Gb/s data rate and power consumption of 437.2 mW under 1.2 V supply voltage. Compared to the state-of-the-art IEEE 802.15.3c LDPC decoder chips, our proposed chip achieves over 90% reduction of routing wires, 73.8% and 11.5% enhancement of hardware and energy efficiency, respectively.",
       "doi": "10.1109/TCSI.2014.2360331",
       "url": "https://doi.org/10.1109/TCSI.2014.2360331",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2015_a-7-92-gb-s-437-2-mw-stochastic-ldpc-decoder-chip-for-ieee-802-15-3c-application",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-3",
@@ -101,14 +100,13 @@
       ],
       "scope": "Design methodology",
       "innovation": "Establishes a fundamental link between stochastic circuits and Boolean spectral transforms (UP/BP/IBP formats).",
+      "abstract": "Stochastic computing (SC) is an approximate computing technique that processes data in the form of long pseudorandom bit-streams which can be interpreted as probabilities. Its key advantages are low-complexity hardware and high-error tolerance. SC has recently been finding application in several important areas, including image processing, artificial neural networks, and low-density parity check decoding. Despite a long history, SC still lacks a comprehensive design methodology, so existing designs tend to be either ad hoc or based on specialized design methods. In this paper, we demonstrate a fundamental relation between stochastic circuits and spectral transforms. Based on this, we propose a general, transform-based approach to the analysis and synthesis of SC circuits. We implemented this approach in a program spectral transform use in stochastic circuit synthesis (STRAUSS), which also includes a method of optimizing stochastic number-generation circuitry. Finally, we show that the area cost of the circuits generated by STRAUSS is significantly smaller than that of previous work.",
       "doi": "10.1109/TCAD.2015.2432138",
       "url": "https://doi.org/10.1109/TCAD.2015.2432138",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2015_strauss-spectral-transform-use-in-stochastic-circuit-synthesis",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-4",
@@ -126,14 +124,13 @@
       ],
       "scope": "Markov chain Monte Carlo (MCMC)",
       "innovation": "Proposes Stochastic Iterative MIMO (SIM): MCMC/Gibbs MIMO detection where the channel decoder directly updates Gibbs samples.",
+      "abstract": "In this paper, we propose a Stochastic iterative multiple-input multiple-output (SIM) detection system based on the Markov chain Monte Carlo (MCMC) method. To improve the detection performance, the Gibbs sampler of the MCMC detector in the SIM is updated by the decoded bits from a channel decoder directly. The channel decoder is part of the updating unit that generates the new samples in the MCMC updating process. We also implement the SIM in a fully parallel scheme, which achieves a high detection speed. As a case study, we have designed and synthesized a 128-parallel 4 × 4 16-QAM SIM system using a CMOS 130 nm technology with a core area of 1.98 mm 2 and 457K logic gates. The SIM detection system can achieve a throughput of 787.5Mbps with a frame error rate (FER) 10-3 at Eb/N0=7dB, equaling the FER of a traditional iterative MIMO detection with four outer iterations.",
       "doi": "10.1109/TCSI.2015.2390558",
       "url": "https://doi.org/10.1109/TCSI.2015.2390558",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2015_stochastic-iterative-mimo-detection-system-algorithm-and-hardware-design",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-5",
@@ -151,14 +148,13 @@
       ],
       "scope": "Fault-tolerant computing",
       "innovation": "Maps Sauvola local document binarization to unipolar SC with fixed 9×9 windows.",
+      "abstract": "Binarization plays an important role in document image processing, particularly in degraded document images. Among all local image thresholding algorithms, Sauvola has excellent binarization performance for degraded document images. However, this algorithm is computationally intensive and sensitive to the noises from the internal computational circuits. In this paper, we present a stochastic implementation of Sauvola algorithm. Our experimental results show that the stochastic implementation of Sauvola needs much less time and area and can tolerate more faults, while consuming less power in comparison with its conventional implementation.",
       "doi": "10.1109/TVLSI.2015.2415932",
       "url": "https://doi.org/10.1109/TVLSI.2015.2415932",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2016_a-fast-fault-tolerant-architecture-for-sauvola-local-image-thresholding-algorith",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-6",
@@ -176,14 +172,13 @@
       ],
       "scope": "Discrete Fourier transform (DFT)/fast Fourier transformation (FFT)",
       "innovation": "First high-accuracy scaling-free stochastic FFT (plus improved stochastic DFT) via two-line SC and a carry-aware adder (λ-bounded counter).",
+      "abstract": "Discrete Fourier transform (DFT) is an important transformation technique in signal processing tasks. Due to its ultrahigh computing complexity as O(N2), N-point DFT is usually implemented in the format of fast Fourier transformation (FFT) with the complexity of O(N log N). Despite this significant reduction in complexity, the hardware cost of the multiplication-intensive N-point FFT is still very prohibitive, particularly for many large-scale applications that require large N. This brief, for the first time, proposes high-accuracy low-complexity scalingfree stochastic DFT/FFT designs. With the use of the stochastic computing technique, the hardware complexity of the DFT/FFT designs is significantly reduced. More importantly, this brief presents the scaling-free stochastic adder and the random number generator sharing scheme, which enable a significant reduction in accuracy loss and hardware cost. Analysis results show that the proposed stochastic DFT/FFT designs achieve much better hardware performance and accuracy performance than state-of-the-art stochastic design.",
       "doi": "10.1109/TCSII.2016.2603465",
       "url": "https://doi.org/10.1109/TCSII.2016.2603465",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2016_area-efficient-scaling-free-dft-fft-design-using-stochastic-computing",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-7",
@@ -201,14 +196,13 @@
       ],
       "scope": "Fault-tolerant circuit design",
       "innovation": "Shows a Muller C-element on uncorrelated stochastic bitstreams computes Bayes' rule (Eq. 7 ≡ Eq. 9).",
+      "abstract": "Bayesian inference is a powerful approach for integrating independent conflicting information for decision-making. Though an important component of robotic, biological, and other sensory-motors systems, general-purpose computers perform Bayesian inference with limited efficiency. Here we show that Bayesian inference can be efficiently performed with stochastic signals, which are particularly adapted to novel low power nanodevices that exhibit faults and device variations. A simple Muller C-element directly implements Bayes' rule. Complex inferences are performed by C-element trees, which compute the probability of an event based on multiple independent sources of evidence. A naïve Bayesian spam filter circuit is demonstrated as a pedagogical application, and design techniques for improving circuit functionality are described. Limitations of this structure are discussed in terms of signal autocorrelation. The stochastic inference structure is exceptionally robust to faults, an essential feature of decision circuits, and can therefore leverage the increased efficiency of emerging nanodevices. This hardware implementation of Bayesian inference is extremely area and power efficient, with an area-energy-delay product several orders of magnitude less than the conventional floating point implementation. These results open a pathway for a direct stochastic hardware implementation of Bayesian inference, enabling a new class of embedded decision circuits for robotics and medical applications.",
       "doi": "10.1109/TCSI.2016.2546064",
       "url": "https://doi.org/10.1109/TCSI.2016.2546064",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2016_bayesian-inference-with-muller-c-elements",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-8",
@@ -226,14 +220,13 @@
       ],
       "scope": "Energy efficiency",
       "innovation": "Stochastic LU decomposition for small/medium MIMO matrices using dual partition computation (DPC) to cut stream length for high bit-width signals.",
+      "abstract": "In this paper, we design a hardware and energy-efficient stochastic lower-upper decomposition (LUD) scheme for multiple-input multiple-output receivers. By employing stochastic computation, the complex arithmetic operations in LUD can be performed with simple logic gates. With proposed dual partition computation method, the stochastic multiplier and divider exhibit high computation accuracy with relative short length stochastic stream. We have designed and synthesized the stochastic LUD with CMOS 130-nm technology. According to the postlayout report, the hardware efficiency of the stochastic LUD is as high as 1.5× compared with the exiting LUD methods, and the energy efficiency is also higher than the state-of-the-art LUD when the matrix dimension is 8 × 8 and larger.",
       "doi": "10.1109/TVLSI.2015.2446481",
       "url": "https://doi.org/10.1109/TVLSI.2015.2446481",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2016_hardware-and-energy-efficient-stochastic-lu-decomposition-scheme-for-mimo-receiv",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-9",
@@ -251,14 +244,13 @@
       ],
       "scope": "Energy efficiency",
       "innovation": "Designs stochastic VQ encoders for L1-norm, squared L2-norm, and third-law (p=3) error metrics with FSM tanh comparators, Bernstein polynomials, and index embedding in the bit stream.",
+      "abstract": "Vector quantization (VQ) is a general data compression technique that has a scalable implementation complexity and potentially a high compression ratio. In this paper, a novel implementation of VQ using stochastic circuits is proposed and its performance is evaluated against conventional binary designs. The stochastic and binary designs are compared for the same compression quality, and the circuits are synthesized for an industrial 28-nm cell library. The effects of varying the sequence length of the stochastic representation are studied with respect to throughput per area (TPA) and energy per operation (EPO). The stochastic implementations are shown to have higher EPOs than the conventional binary implementations due to longer latencies. When a shorter encoding sequence with 512 bits is used to obtain a lower quality compression measured by the L1-norm, squared L2-norm, and third-law errors, the TPA ranges from 1.16 to 2.56 times than that of the binary implementation with the same compression quality. Thus, although the stochastic implementation underperforms for a high compression quality, it outperforms the conventional binary design in terms of TPA for a reduced compression quality. By exploiting the progressive precision feature of a stochastic circuit, a readily scalable processing quality can be attained by halting the computation after different numbers of clock cycles.",
       "doi": "10.1109/TVLSI.2016.2535313",
       "url": "https://doi.org/10.1109/TVLSI.2016.2535313",
       "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": "https://github.com/Probabilistic-Computing/probabilistic-computing-lab/tree/main/papers/sc/2016_stochastic-circuit-design-and-performance-evaluation-of-vector-quantization-for",
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-10",
@@ -268,21 +260,21 @@
       "year": 2017,
       "venue": "IEEE TVLSI",
       "journal": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
-      "category": "Coding & Communications",
-      "raw_category": "coding-communications",
+      "category": "Stochastic Arithmetic & Circuits",
+      "raw_category": "circuit-design, fault-tolerance-algorithm",
       "categories": [
-        "Coding & Communications"
+        "circuit-design",
+        "fault-tolerance-algorithm"
       ],
       "scope": "Approximate error detection",
-      "innovation": "",
+      "innovation": "StoCK: approximate error checkers in stochastic computing (SC) that run in parallel with a binary datapath and compare against an error band (EB).",
+      "abstract": "Designing reliable systems, while eschewing the high overheads of conventional fault tolerance techniques, is a critical challenge in the deeply scaled CMOS and post-CMOS era. To address this challenge, we leverage the intrinsic resilience of application domains such as multimedia, recognition, mining, search, and analytics where acceptable outputs are produced despite occasional approximate computations. We propose stochastic checkers (checkers designed using stochastic logic) as a new approach to performing error checking in an approximate manner at greatly reduced overheads. Stochastic checkers are inherently inaccurate and require long latencies for computation. To limit the loss in error coverage, as well as false positives (correct outputs flagged as erroneous), caused due to the approximate nature of stochastic checkers, we propose input permuted partial replicas of stochastic logic, which improves their accuracy with minimal increase in overheads. To address the challenge of long error detection latency, we propose progressive checking policies that provide an early decision based on a prefix of the checker's output bitstream. This technique is further enhanced by employing progressively accurate binary-to-stochastic converters. Across a suite of error-resilient applications, we observe that stochastic checkers lead to greatly reduced overheads (29.5% area and 21.5% power, on average) compared with traditional fault tolerance techniques while maintaining high coverage and very low false positives.",
       "doi": "10.1109/TVLSI.2017.2684816",
       "url": "https://doi.org/10.1109/TVLSI.2017.2684816",
-      "has_analysis": false,
+      "has_analysis": true,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-11",
@@ -299,14 +291,13 @@
       ],
       "scope": "Auditory filter",
       "innovation": "",
+      "abstract": "This paper introduces area/energy-efficient gammatone filters based on stochastic computation. The gammatone filter well expresses the performance of human auditory peripheral mechanism and has a potential of improving advanced speech communications systems, especially hearing assisting devices and noise robust speech-recognition systems. Using stochastic computation, a power-and-area hungry multiplier used in a digital filter is replaced by a simple logic gate, leading to area-efficient hardware. However, a straightforward implementation of the stochastic gammatone filter suffers from significantly low accuracy in computation, which results in a low dynamic range (a ratio of the maximum to minimum magnitude) due to a small value of a filter gain. To improve the computation accuracy, gain-balancing techniques are presented that represent the original gain as the product of multiple larger gains introduced at the second-order sections. In addition, dynamic scaling techniques are proposed that scales up small values only on stochastic domain in order to reduce the number of stochastic bits required while maintaining the computation accuracy. For performance comparisons, the proposed stochastic gammatone filters are designed and evaluated on taiwan semiconductor manufacturing company (TSMC) 65-nm CMOS technology. As a result, the proposed filter achieves an area reduction of 90.7% and an energy reduction of 91.8% in comparison with a fixed-point gammatone filter at the same sampling frequency and a comparable dynamic range.",
       "doi": "10.1109/TVLSI.2017.2687404",
       "url": "https://doi.org/10.1109/TVLSI.2017.2687404",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-12",
@@ -323,14 +314,13 @@
       ],
       "scope": "Deep neural network",
       "innovation": "",
+      "abstract": "Deep neural network (DNN) has emerged as a powerful machine learning technique for various artificial intelligence applications. Due to the unique advantages on speed, area, and power, specific hardware design has become a very attractive solution for the efficient deployment of DNN. However, the huge resource cost of multipliers makes the fully-parallel implementations of multiplication-intensive DNN still very prohibitive in many real-time resource-constrained embedded applications. This brief proposes a fully-parallel area-efficient stochastic DNN design. By leveraging stochastic computing (SC) technique, the computations of DNN are implemented using very simple stochastic logic, thereby enabling low-complexity fully-parallel DNN design. In addition, to avoid the accuracy loss incurred by the approximation of SC, we propose an accuracy-aware DNN datapath architecture to retain the test accuracy of stochastic DNN. Moreover, we propose a novel low-complexity architecture for the binary-to-stochastic (B-to-S) interface to drastically reduce the footprint of the peripheral B-to-S circuit. Experimental results show that the proposed stochastic DNN design achieves much better hardware performance than non-stochastic design with negligible test accuracy loss.",
       "doi": "10.1109/TCSII.2017.2746749",
       "url": "https://doi.org/10.1109/TCSII.2017.2746749",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-13",
@@ -347,14 +337,13 @@
       ],
       "scope": "Feedback circuit",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a digital computation approach that operates on random bit streams to perform complex tasks with much smaller hardware footprints compared with conventional binary radix approaches. SC works based on the assumption that input bit streams are independent random sequences of 1s and 0s. Previous SC efforts have avoided implementing functions that have feedback, because doing so has the potential for creating highly correlated inputs. We propose a number of solutions to overcome the challenges of implementing feedback in stochastic logic. We use a family of dynamical system functions that are similar to the well-known logistic map x → μx(1- x) as case studies. We show that complex behaviors, such as period doubling and chaos, do indeed occur in digital logic with only a few gates operating on a few 0s and 1s. Our energy consumption is between 21% and 31% of the conventional binary approach. In order to verify our design methodology, we have measured the mean switching rate between the basins of attraction of two coexisting fixed points and the peak width of the steady-state distribution of the output using a logistic-map-like function as an example. Theoretical results match well with our numerical experiments.",
       "doi": "10.1109/TVLSI.2016.2598359",
       "url": "https://doi.org/10.1109/TVLSI.2016.2598359",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-14",
@@ -371,14 +360,13 @@
       ],
       "scope": "Energy-efficient computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a promising technique for applications that require low area overhead and fault tolerance, but can tolerate relatively high latency. In the SC paradigm, logical computation is performed on randomized bit streams. In prior work, streams were generated with linear feedback shift registers; these contributed heavily to the hardware cost and consumed a significant amount of power. This paper introduces a new approach for encoding signal values: computation is performed on analog periodic pulse signals. Exploiting pulse width modulation, time-encoded signals corresponding to specific values are generated by adjusting the frequency and duty cycles of pulse width modulated (PWM) signals. With this approach, the latency, area, and energy consumption are all greatly reduced. Experimental results on image processing applications show up to 99% performance speedup, 98% saving in energy dissipation, and 40% area reduction compared to prior stochastic approaches. Circuits synthesized with the proposed approach can work as fast and energy-efficiently as a conventional binary design while retaining the fault-tolerance and low-cost advantages of conventional stochastic designs.",
       "doi": "10.1109/TVLSI.2016.2645902",
       "url": "https://doi.org/10.1109/TVLSI.2016.2645902",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-15",
@@ -395,14 +383,13 @@
       ],
       "scope": "Deep neural network (DNN)",
       "innovation": "",
+      "abstract": "The hardware implementation of deep neural networks (DNNs) has recently received tremendous attention: many applications in fact require high-speed operations that suit a hardware implementation. However, numerous elements and complex interconnections are usually required, leading to a large area occupation and copious power consumption. Stochastic computing (SC) has shown promising results for low-power area-efficient hardware implementations, even though existing stochastic algorithms require long streams that cause long latencies. In this paper, we propose an integer form of stochastic computation and introduce some elementary circuits. We then propose an efficient implementation of a DNN based on integral SC. The proposed architecture has been implemented on a Virtex7 field-programmable gate array, resulting in 45% and 62% average reductions in area and latency compared with the best reported architecture in the literature. We also synthesize the circuits in a 65-nm CMOS technology, and we show that the proposed integral stochastic architecture results in up to 21% reduction in energy consumption compared with the binary radix implementation at the same misclassification rate. Due to fault-tolerant nature of stochastic architectures, we also consider a quasi-synchronous implementation that yields 33% reduction in energy consumption with respect to the binary radix implementation without any compromise on performance.",
       "doi": "10.1109/TVLSI.2017.2654298",
       "url": "https://doi.org/10.1109/TVLSI.2017.2654298",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-16",
@@ -419,14 +406,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing is a promising technology for low hardware cost and low power digital signal processing (DSP) systems. However, the quite slow convergence of stochastic normalization leads to low throughput of stochastic computing based DSP systems. In this brief, we propose a fast converging stochastic normalization unit based on joint probability tracking (JPT) method, which operates modified probability tracking on random bit streams to perform the normalization. Simulation results show that the convergence speed of the JPT scheme is as 3.5 times as that of existing methods. According to the synthesis results on 65-nm CMOS technology, the JPT scheme achieves higher (2.8 times) hardware efficiency gains with respect to the existing stochastic computing-based schemes.",
       "doi": "10.1109/TCSII.2017.2735180",
       "url": "https://doi.org/10.1109/TCSII.2017.2735180",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-17",
@@ -443,14 +429,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Sparse code multiple access (SCMA) is a promising multiple access technology candidate for the next-generation communication system, which can dramatically improve spectral efficiency. However, the major challenge of SCMA is the very high detection complexity. Stochastic computing is a new number representation, which can carry out complex computations with very simple logics. In this paper, we extend the application of stochastic computing to SCMA detection and propose a low complexity stochastic SCMA detector. We also design three novel stochastic logic architectures: a new low hardware cost bit stream generation architecture, a low hardware cost stochastic function node update architecture and a fast converging stochastic variable node update architecture. Analysis and simulation results show that the proposed stochastic SCMA detector saves 69% complexity compared with the traditional SCMA detectors with a comparable bit error rate performance. The synthesis results with SIMC 65-nm CMOS technology show that the proposed stochastic SCMA detector achieves 640 Mbps total system throughput with only 1.45-mm2 cell area.",
       "doi": "10.1109/TCSI.2017.2722692",
       "url": "https://doi.org/10.1109/TCSI.2017.2722692",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-18",
@@ -467,14 +452,13 @@
       ],
       "scope": "Bit permutation",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a promising paradigm to realize low-complexity digital circuits that are tolerant to soft errors. Stochastic circuits include a stochastic number generator (SNG) to generate a stochastic number that corresponds to a given binary number. Conventional SNGs, which employ linear feedback shift registers (LFSRs) to generate stochastic numbers in a serial manner would cost significantly in time. In this brief, a parallel SNG has been proposed, which can generate stochastic numbers in parallel by transforming the input binary number to a modified unary number and permuting it using a bit permutation network. Further, a method to share a single LFSR among multiple SNGs has been presented. Experimental results show that the proposed SNG can achieve improvement in SC correlation and energy-delay-product by 28.57% and 4.32×, respectively, when compared to the existing shared LFSR-based SNG. For applications, such as edge detector, multiplier, and complex multiplication, the proposed SNG has achieved reduction in execution time and area-delay-product by up to 1000× and 9×, respectively, as compared to others.",
       "doi": "10.1109/TCSII.2017.2708128",
       "url": "https://doi.org/10.1109/TCSII.2017.2708128",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-19",
@@ -491,14 +475,13 @@
       ],
       "scope": "Bit parallelism",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a promising approach for low-power and low-cost applications with the added benefit of high error tolerance. However, the high overhead of generating stochastic bitstreams can offset the advantages of SC especially when a large number of bitstreams are needed. In this paper, we propose a new stochastic number generator (SNG) that significantly reduces area and energy while improving accuracy. Experimental results show that the proposed SNG can reduce energy by more than 72% compared with the state-of-the-art designs.",
       "doi": "10.1109/TCAD.2018.2789732",
       "url": "https://doi.org/10.1109/TCAD.2018.2789732",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-20",
@@ -515,14 +498,13 @@
       ],
       "scope": "Accelerators",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an alternative computing technique for embedded systems which offers lower area and power, and better error resilience compared to binary-encoded (BE) computation. However, the potential of and general design methodologies for SC in accelerator architectures are not well-understood. In this paper, we evaluate individual SC operations, and end-to-end accelerator architectures to understand when and why SC accelerators can achieve compelling energy efficiency gains. Based on these results, we present general design guidelines that should be considered when building energy-optimal SC accelerator architectures. We also evaluate a fully fabricated ASIC prototype—the first of its kind—to empirically evaluate the error tolerance limits of voltage overscaling (VOS) in SC. Our results show that energy efficiency gains from SC primarily stem from SC’s simpler datapaths which require fewer sequential elements compared to BE equivalents. This allows them to achieve energy efficiency gains as high as $2.4 \\times $ and $30 \\times $ at 8-bit and 4-bit fixed-point precision, respectively. We also find that VOS can improve the energy efficiency further by up to $1.9\\times $ by exploiting SC’s error tolerant encoding.",
       "doi": "10.1109/TCAD.2018.2858338",
       "url": "https://doi.org/10.1109/TCAD.2018.2858338",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-21",
@@ -539,14 +521,13 @@
       ],
       "scope": "Adaptive filter (AF)",
       "innovation": "",
+      "abstract": "Gradient descent (GD) is a widely used optimization algorithm in machine learning. In this paper, a novel stochastic computing GD circuit (SC-GDC) is proposed by encoding the gradient information in stochastic sequences. Inspired by the structure of a neuron, a stochastic integrator is used to optimize the weights in a learning machine by its “inhibitory” and “excitatory” inputs. Specifically, two AND (or XNOR) gates for the unipolar representation (or the bipolar representation) and one stochastic integrator are, respectively, used to implement the multiplications and accumulations in a GD algorithm. Thus, the SC-GDC is very area- and power-efficient. As per the formulation of the proposed SC-GDC, it provides unbiased estimate of the optimized weights in a learning algorithm. The proposed SC-GDC is then used to implement a least-mean-square algorithm and a softmax regression. With a similar accuracy, the proposed design achieves more than $30 \\times $ improvement in throughput per area (TPA) and consumes less than 13% of the energy per training sample, compared with a fixed-point implementation. Moreover, a signed SC-GDC is proposed for training complex neural networks (NNs). It is shown that for a 784-128-128-10 fully connected NN, the signed SC-GDC produces a similar training result with its fixed-point counterpart, while achieving more than 90% energy saving and 82% reduction in training time with more than $50 \\times $ improvement in TPA.",
       "doi": "10.1109/TCAD.2018.2858363",
       "url": "https://doi.org/10.1109/TCAD.2018.2858363",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-22",
@@ -563,14 +544,13 @@
       ],
       "scope": "Low cost design",
       "innovation": "",
+      "abstract": "Sorting is a common task in a wide range of applications from signal and image processing to switching systems. For applications that require high performance, sorting is often performed in hardware with application-specified integrated circuits or field-programmable gate arrays. Hardware cost and power consumption are the dominant concerns. The usual approach is to wire up a network of compare-and-swap units in a configuration called the Batcher (or bitonic) network. Such networks can readily be pipelined. This paper proposes a novel area-efficient and power-efficient approach to sorting networks, based on “unary processing.” In unary processing, numbers are encoded uniformly by a sequence of one value (say 1) followed by a sequence of the other value (say 0) in a stream of 0's and 1's with the value defined by the fraction of 1's in the stream. Synthesis results of complete sorting networks show up to 92% area and power saving compared to the conventional binary implementations. However, the latency increases. To mitigate the increased latency, this paper uses a novel time-encoding of data. The approach is validated with two implementations of an important application of sorting: median filtering. The result is a low cost, energy-efficient implementation of median filtering with only a slight accuracy loss, compared to conventional implementations.",
       "doi": "10.1109/TVLSI.2018.2822300",
       "url": "https://doi.org/10.1109/TVLSI.2018.2822300",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-23",
@@ -587,14 +567,13 @@
       ],
       "scope": "Cube assignment",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional computation paradigm, in which digital circuits are adopted to compute on stochastic bit streams. The value represented by a stochastic bit stream is the probability of obtaining a one in the stream. Stochastic circuits are highly tolerant to bit flip errors. Compared to the conventional binary computing, SC can perform complicated arithmetic computations with simple circuits. With such advantages, SC has been applied in a number of applications. This raises recent interests in developing general methods to automatically synthesize stochastic circuits. However, the synthesis problem is different from and more complicated than the traditional logic synthesis, due to the special solution space of the problem. In this paper, we propose a novel method to synthesize a high-quality stochastic circuit. Our method is based on assigning cubes (i.e., product terms) to the on-set of the Boolean function. A heuristic breadth-first search algorithm is proposed to search for a good stochastic circuit in the solution space. Our experimental results showed that the proposed method can produce better circuits than the state-of-the-art methods.",
       "doi": "10.1109/TCAD.2018.2789725",
       "url": "https://doi.org/10.1109/TCAD.2018.2789725",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-24",
@@ -611,14 +590,13 @@
       ],
       "scope": "Stochastic logic",
       "innovation": "",
+      "abstract": "This brief addresses computing polynomials with all positive coefficients whose sum is less than or equal to one using unipolar stochastic logic. The contributions of this brief are twofold. First, we present novel approaches to expanding polynomials that can be implemented using multiplexers in unipolar stochastic logic. These expansions are based on ascending-order, and Horner's rule based on descending-order. It is shown that the Horner's rule expansion is equivalent to OR-AND expansion. We also present another new expansion, referred as AND-OR. These expansions have not been presented in any prior work. Second, we also show that the proposed AND-OR expansion is logically equivalent to the prior double-NAND expansion. Furthermore, we show that the OR-AND circuits can be transformed into equivalent double-NOR circuits.",
       "doi": "10.1109/TCSII.2017.2756862",
       "url": "https://doi.org/10.1109/TCSII.2017.2756862",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-25",
@@ -635,14 +613,13 @@
       ],
       "scope": "Approximate computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional method of computation that treats data as probabilities. Typically, each bit of an N-bit stochastic number (SN) Xis randomly chosen to be 1 with some probability pX, and X is generated and processed by conventional logic circuits. For instance, a single AND gate performs multiplication. The value X of an SN is measured by the density of 1 s in it, an information-coding scheme also found in biological neural systems. SC has uses in massively parallel systems and is very tolerant of soft errors. Its drawbacks include low accuracy, slow processing, and complex design needs. Its ability to efficiently perform tasks like communication decoding and neural network inference has rekindled interest in the field. Many challenges remain to be overcome, however, before SC becomes widespread. In this paper, we discuss the evolution of SC, mostly focusing on recent developments. We highlight the main challenges and discuss potential methods of overcoming them.",
       "doi": "10.1109/TCAD.2017.2778107",
       "url": "https://doi.org/10.1109/TCAD.2017.2778107",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-26",
@@ -659,14 +636,13 @@
       ],
       "scope": "Low-discrepancy (LD) sequences",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) often requires long stochastic sequences and, thus, a long latency to achieve accurate computation. The long latency leads to an inferior performance and low energy efficiency compared with most conventional binary designs. In this paper, a type of low-discrepancy sequences, the Sobol sequence, is considered for use in SC. Compared to the use of pseudorandom sequences generated by linear feedback shift registers (LFSRs), the use of Sobol sequences improves the accuracy of stochastic computation with a reduced sequence length. The inherent feature in Sobol sequence generators enables the parallel implementation of random number generators with an improved performance and hardware efficiency. In particular, the underlying theory is formulated and circuit design is proposed for an arbitrary level of parallelization in a power of 2. In addition, different strategies are implemented for parallelizing combinational and sequential stochastic circuits. The hardware efficiency of the parallel stochastic circuits is measured by energy per operation (EPO), throughput per area (TPA), and runtime. At a similar accuracy, the 8× parallel stochastic circuits using Sobol sequences consume approximately 1% of the EPO of the conventional LFSR-based nonparallelized circuits. Meanwhile, an average of 70 (up to 89) times improvements in TPA and less than 1% runtime are achieved. A sorting network is implemented for a median filter (MF) as an application. For a similar image processing quality, a higher energy efficiency is obtained for an 8× parallelized stochastic MF compared with its binary counterpart.",
       "doi": "10.1109/TVLSI.2018.2812214",
       "url": "https://doi.org/10.1109/TVLSI.2018.2812214",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-27",
@@ -683,14 +659,13 @@
       ],
       "scope": "Mixed-signal neuromorphic system",
       "innovation": "",
+      "abstract": "The prefrontal cortex (PFC) plays an important role in complex cognitive computations, including planning and decision making. Although recurrent spiking neural network (SNN) software models of PFC have been successful in reproducing many of its cognitive computational aspects, little attention has been devoted to the question of how such systems can perform with low-resolution parameters and be robust to noise and variability in their input signals and state variables. Here, we present a mixed-signal analog/digital neuromorphic implementation of a state-dependent SNN architecture that addresses these issues by construction. The network relies on synaptic dis-inhibition to ensure robust decision making even in the face of very large variability. Depending on its connectivity, the network can either perform robustly in a deterministic way or exploit the device mismatch and noise to explore stochastically multiple states in constraint satisfaction problems (CSPs). We validate the architecture by mapping it onto a network of spiking neurons in a multi-core mixed-signal neuromorphic system and presenting experimental results for three different examples of CSPs.",
       "doi": "10.1109/TCSII.2019.2907848",
       "url": "https://doi.org/10.1109/TCSII.2019.2907848",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-28",
@@ -707,14 +682,13 @@
       ],
       "scope": "Energy efficient",
       "innovation": "",
+      "abstract": "Recurrent neural networks (RNNs) are widely used to solve a large class of recognition problems, including prediction, machine translation, and speech recognition. The hardware implementation of RNNs is, however, challenging due to the high area and energy consumption of these networks. Recently, stochastic computing (SC) has been considered for implementing neural networks and reducing the hardware consumption. In this paper, we propose an energy-efficient and noise-tolerant long short-term memory-based RNN using SC. In this SC-RNN, a hybrid structure is developed by utilizing SC designs and binary circuits to improve the hardware efficiency without significant loss of accuracy. The area and energy consumption of the proposed design are between 1.6%-2.3% and 6.5%-11.2%, respectively, of a 32-bit floating-point (FP) implementation. The SC-RNN requires significantly smaller area and lower energy consumption in most cases compared to an 8-bit fixed point implementation. The proposed design achieves a higher noise tolerance compared to binary implementations. The inference accuracy is from 10% to 13% higher than an FP design when the noise level is high in the computation process.",
       "doi": "10.1109/TVLSI.2019.2920152",
       "url": "https://doi.org/10.1109/TVLSI.2019.2920152",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-29",
@@ -731,14 +705,13 @@
       ],
       "scope": "Activation function",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a promising computing paradigm with low power hardware circuitry. This brief proposes a new finite state machine (FSM)-based function implementation in the SC designs. The new architecture allows multiple input stochastic bitstreams to improve the processing latency and precision loss. As compared to previous integral SC design, the proposed algorithm reduces the total number of states needed in the FSM, while maintaining good accuracy performance. The proposed FSM-based construction is also verified by the mathematical analysis. Synthesized results of hardware implementation reveal that the proposed method has competitive advantages over the previous counterparts in terms of area and power consumption. The presented techniques can be applied in a lot of activation function implementations of the deep neural networks.",
       "doi": "10.1109/TVLSI.2019.2892847",
       "url": "https://doi.org/10.1109/TVLSI.2019.2892847",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-30",
@@ -755,14 +728,13 @@
       ],
       "scope": "CMOS integrated circuits probabilistic logic",
       "innovation": "",
+      "abstract": "Invertible logic can operate in one of two modes: 1) a forward mode, in which inputs are presented and a single, correct output is produced, and 2) a reverse mode, in which the output is fixed and the inputs take on values consistent with the output. It is possible to create invertible logic using various Boltzmann machine configurations. Such systems have been shown to solve certain challenging problems quickly, such as factorization and combinatorial optimization. In this paper, we show that invertible logic can be implemented using simple spiking neural networks based on stochastic computing. We present a design methodology for invertible stochastic gates, which can be implemented using a small amount of CMOS hardware. We demonstrate that our design can not only correctly implement the basic gates with invertible capability but can also be extended to construct invertible stochastic adder and multiplier circuits. The experimental results are presented, which demonstrate the correct operation of synthesizable invertible circuitry performing both multiplication and factorization, along with fabricated ASIC measurement results for an invertible multiplier circuit.",
       "doi": "10.1109/TCSI.2018.2889732",
       "url": "https://doi.org/10.1109/TCSI.2018.2889732",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-31",
@@ -779,14 +751,13 @@
       ],
       "scope": "ASIC",
       "innovation": "",
+      "abstract": "Deep convolutional neural networks (DCNNs) are one of the most promising deep learning techniques and have been recognized as the dominant approach for almost all recognition and detection tasks. The computation of DCNNs is memory intensive due to large feature maps and neuron connections, and the performance highly depends on the capability of hardware resources. With the recent trend of wearable devices and Internet of Things, it becomes desirable to integrate the DCNNs onto embedded and portable devices that require low power and energy consumptions and small hardware footprints. Recently stochastic computing (SC)-DCNN demonstrated that SC as a low-cost substitute to binary-based computing radically simplifies the hardware implementation of arithmetic units and has the potential to satisfy the stringent power requirements in embedded devices. In SC, many arithmetic operations that are resource-consuming in binary designs can be implemented with very simple hardware logic, alleviating the extensive computational complexity. It offers a colossal design space for integration and optimization due to its reduced area and soft error resiliency. In this paper, we present HEIF, a highly efficient SC-based inference framework of the large-scale DCNNs, with broad applications including (but not limited to) LeNet-5 and AlexNet, that achieves high energy efficiency and low area/hardware cost. Compared to SC-DCNN, HEIF features: 1) the first (to the best of our knowledge) SC-based rectified linear unit activation function to catch up with the recent advances in software models and mitigate degradation in application-level accuracy; 2) the redesigned approximate parallel counter and optimized stochastic multiplication using transmission gates and inverse mirror adders; and 3) the new optimization of weight storage using clustering. Most importantly, to achieve maximum energy efficiency while maintaining acceptable accuracy, HEIF considers holistic optimizations on cascade connection of function blocks in DCNN, pipelining technique, and bit-stream length reduction. Experimental results show that in large-scale applications HEIF outperforms previous SC-DCNN by the throughput of 4.1×, by area efficiency of up to 6.5×, and achieves up to 5.6× energy improvement.",
       "doi": "10.1109/TCAD.2018.2852752",
       "url": "https://doi.org/10.1109/TCAD.2018.2852752",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-32",
@@ -803,14 +774,13 @@
       ],
       "scope": "Deterministic computing",
       "innovation": "",
+      "abstract": "Stochastic logic performs computation on data represented by random bit-streams. The representation allows complex arithmetic to be performed with very simple logic, but it suffers from high latency and poor precision. Furthermore, the results are always somewhat inaccurate due to random fluctuations. In this paper, we show that randomness is not a requirement for this computational paradigm. If properly structured, the same arithmetical constructs can operate on deterministic bit-streams, with the data represented uniformly by the fraction of 1's versus 0's. This paper presents three approaches for the computation: relatively prime stream lengths, rotation, and clock division. Unlike stochastic methods, all three of our deterministic methods produce completely accurate results. The cost of generating the deterministic streams is a small fraction of the cost of generating streams from random/pseudorandom sources. Most importantly, the latency is reduced by a factor of (1/2n), where n is the equivalent number of bits of precision. When computing in unary, the bit-stream length increases with each level of logic. This is an inevitable consequence of the representation, but it can result in unmanageable bit-stream lengths. We discuss two methods for maintaining constant bit-streams lengths via approximations, based on low-discrepancy sequences. These methods provide the best accuracy and area × delay product. They are fast-converging and therefore offer progressive precision.",
       "doi": "10.1109/TVLSI.2019.2929354",
       "url": "https://doi.org/10.1109/TVLSI.2019.2929354",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-33",
@@ -827,14 +797,13 @@
       ],
       "scope": "D flip-flop (DFF) insertion",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional computing technique using digital circuits. It performs arithmetic computation on stochastic bit streams (SBSs), which encode real values through the ratios of ones in the streams. Despite its advantages such as simple arithmetic units and strong error tolerance, SC faces two big challenges: 1) long computation latency and 2) large hardware overhead to generate independent SBSs. A recent work proposes to insert D flip-flops (DFFs) into the stochastic circuit to reduce the overhead to generate SBSs. In this paper, observing that DFFs can also be exploited to reduce circuit delay, we propose a novel method to insert DFFs into a stochastic circuit to simultaneously reduce the computation latency of the circuit and the overhead of generating SBSs, thus addressing both challenges at the same time. Experimental results showed that compared to the state-of-the-art method in optimizing stochastic circuits with DFF insertion, our method can reduce the computation latency by 14.3% and the number of DFFs by 48.1%.",
       "doi": "10.1109/TCAD.2018.2846660",
       "url": "https://doi.org/10.1109/TCAD.2018.2846660",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-34",
@@ -851,14 +820,13 @@
       ],
       "scope": "Stochastic computation",
       "innovation": "",
+      "abstract": "Majority systems, whose correct operation usually requires a specific number of components, are ubiquitous and have been used in various critical infrastructures. To capture a deeper understanding, we consider several types of majority systems, i.e., consecutive (i.e., linear and circular ones) and symmetrical systems. Moreover, to enhance the accuracy and efficiency of reliability evaluation, stochastic analysis architectures are proposed: input signal probabilities of any distributions can be addressed efficiently with the adoption of non-Bernoulli sequences, consisting of random permutations of fixed numbers of ones and zeros. Via propagating the sequences within constructed stochastic architectures, we can derive the system reliability. Moreover, various benchmarks are analyzed through stochastic analysis, and we also compare the corresponding results with those obtained using other approaches. Though the accuracy of stochastic analysis is largely affected by the employed sequence length, an acceptable accuracy can be attained with the adoption of a reasonable sequence length. In this line, the optimal design is also investigated for different implementations.",
       "doi": "10.1109/TCSII.2018.2839095",
       "url": "https://doi.org/10.1109/TCSII.2018.2839095",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-35",
@@ -875,14 +843,13 @@
       ],
       "scope": "Iterative algorithms",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a promising candidate for fault-tolerant computing in digital circuits. We present a novel stochastic computing estimation architecture allowing to solve a large group of estimation problems including least squares estimation as well as sparse estimation. This allows utilizing the high fault tolerance of stochastic computing for implementing estimation algorithms. The presented architecture is based on the recently proposed linearized-Bregman-based sparse Kaczmarz algorithm. To realize this architecture, we develop a shrink function in stochastic computing and analytically describe its error probability. We compare the stochastic computing architecture to a fixed-point binary implementation and present bit-true simulation results as well as synthesis results demonstrating the feasibility of the proposed architecture for practical implementation.",
       "doi": "10.1109/TCSII.2019.2916305",
       "url": "https://doi.org/10.1109/TCSII.2019.2916305",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-36",
@@ -899,14 +866,13 @@
       ],
       "scope": "Reliability-enhanced design",
       "innovation": "",
+      "abstract": "Reliability-enhanced circuit design is increasingly demanded due to severer transistor aging and variations at nanoscale. In this brief, new insights of inherently enhancing reliability are presented, based on the emerging computing paradigm of stochastic computing (SC). A new cross-layer reliability simulation flow supporting statistical static timing analysis (SSTA) is proposed, with a new long-term compact transistor aging model validated by 16/14nm FinFET experimental data. Then, the reliability of SC circuits in practical applications is investigated and compared with that of conventional binary circuits, for the first time. The results indicate that, the performance of SC circuits is intrinsically resistant to aging and variations ascribed to the circuit topology and the probability encoding. It suggests that, SC can provide more relaxed circuit design margins, offering promises to the application of emerging nanodevices in the future.",
       "doi": "10.1109/TCSII.2020.2993273",
       "url": "https://doi.org/10.1109/TCSII.2020.2993273",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-37",
@@ -923,14 +889,13 @@
       ],
       "scope": "Low power application",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) in recent years has been defined as a digital computation approach that operates on streams of random bits that represent probability values. SC can perform complex tasks with much smaller hardware footprints compared with conventional binary methods, but previous methods on SC circuits operated on serial bit streams, which leads to high-latency implementations. This article presents a significant improvement over previous work; it provides a deterministic parallel bit shuffling network that can use a simple deterministic thermometer encoding of data, resulting in zero random fluctuation and high accuracy, yet keeping the output bit-stream length constant. We use core “stochastic” logic circuits that do not employ constant coefficients, making them significantly smaller than traditional stochastic logic that use a significant amount of resources to generate such coefficients. Our experiments show that compared with previous SC methods, our method has up to 3x smaller mean absolute error, and better area x delay and power efficiency. Compared with conventional binary methods, our method is better in terms of area x delay at 8-bit resolution. It shows better power efficiency (40x, 18x, and 8x Gops/W at 8-, 10-, and 12-bit resolutions) compared with conventional binary.",
       "doi": "10.1109/TVLSI.2020.2984731",
       "url": "https://doi.org/10.1109/TVLSI.2020.2984731",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-38",
@@ -947,14 +912,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "By introducing stochastic computing (SC), the hardware consumption of Deep Neural Network (DNN) can be reduced significantly. However, long SC sequence length is needed to maintain the accuracy, which results in extended computation time. To shorten the sequence length, we propose two high-accuracy SC computation units to improve the precision of SC-DNN, which are the rematching-based correlation-independent multiplier and the accumulator-based Rectified Linear Unit. Moreover, a length-adaptive method that uses variable lengths for different images is adopted to decrease the average sequence length. Software simulation shows that the SC design has just 0.01% accuracy loss with only the sequence length of 20 for MNIST dataset comparing to the binary system. The ASIC layout results demonstrate the area efficiency is improved by 16X comparing to the latest SC-DNN with similar accuracy loss.",
       "doi": "10.1109/TCSII.2020.2969691",
       "url": "https://doi.org/10.1109/TCSII.2020.2969691",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-39",
@@ -971,14 +935,13 @@
       ],
       "scope": "Inner product",
       "innovation": "",
+      "abstract": "In this brief, we present a novel inner product (IP) design for stochastic computing (SC). SC is an emerging computing technique, that encodes a number in the probability of observing a one in a random bit stream. This leads to reduced hardware costs and high error tolerance. The proposed IP design is based on a two-line bipolar encoding format and applies sequential processing of the input in a central accumulation unit. Sequential processing significantly increases the computation accuracy, since it allows for preliminary cancelation of carry bits. Moreover, the central accumulation unit gives a much better scalability compared to conventional adder tree approaches. We show that the proposed IP design outperforms a state-of-the-art design in terms of hardware costs for high accuracy requirements and fault tolerance.",
       "doi": "10.1109/TCSII.2019.2913501",
       "url": "https://doi.org/10.1109/TCSII.2019.2913501",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-40",
@@ -995,14 +958,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Deep Neural Networks (DNNs) have recently shown state-of-the-art results on various applications, such as computer vision and recognition tasks. DNN inference engines can be implemented in hardware with high energy efficiency as the computation can be realized using a low-precision fixed point or even binary precision with sufficient cognition accuracies. On the other hand, training DNNs using the well-known back-propagation algorithm requires high-precision floating-point computations on a CPU and/or GPU causing significant power dissipation (more than hundreds of kW) and long training time (several days or more). In this paper, we demonstrate a training chip fabricated using a commercial 65-nm CMOS technology for machine learning. The chip performs training without back propagation by using invertible logic with stochastic computing that can directly obtain weight values using input/output training data with low precision suitable for inference. When training neurons that compute the weighted sum of all inputs and then apply a non-linear activation function, our chip demonstrates a reduction of power dissipation and latency by 99.98% and 99.95%, respectively, in comparison with a state-of-the-art software implementation.",
       "doi": "10.1109/TCSI.2019.2960383",
       "url": "https://doi.org/10.1109/TCSI.2019.2960383",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-41",
@@ -1019,14 +981,13 @@
       ],
       "scope": "Linear feedback shift register (LFSR)",
       "innovation": "",
+      "abstract": "Stochastic unary computing provides low-area circuits. However, the required area consuming stochastic number generators (SNGs) in these circuits can diminish their overall gain in area, particularly if several SNGs are required. We propose area-efficient SNGs by sharing the permuted output of one linear feedback shift register (LFSR) among several SNGs. With no hardware overhead, the proposed architecture generates stochastic bit streams with minimum stochastic computing correlation (SCC). Compared to the circular shifting approach presented in prior work, our approach produces stochastic bit streams with 67% less average SCC when a 10-bit LFSR is shared between two SNGs. To generalize our approach, we propose an algorithm to find a set of m permutations (n m 2) with a minimum pairwise SCC, for an n-bit LFSR. The search space for finding permutations with an exact minimum SCC grows rapidly when n increases and it is intractable to perform a search algorithm using accurately calculated pairwise SCC values, for n > 9. We propose a similarity function that can be used in the proposed search algorithm to quickly find a set of permutations with SCC values close to the minimum one. We evaluate our approach for several applications. The results show that, compared to prior work, it achieves lower mean-squared error (MSE) with the same (or even lower) area. Additionally, based on simulation results, we show that replacing the comparator component of an SNG circuit with a weighted binary generator can reduce SCC.",
       "doi": "10.1109/TVLSI.2019.2963678",
       "url": "https://doi.org/10.1109/TVLSI.2019.2963678",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-42",
@@ -1043,14 +1004,13 @@
       ],
       "scope": "Stochastic computing (SC)",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional computing paradigm which enables low power and massive parallelism in various applications. The numerical values in SC are represented as random bit-streams and interpreted as probabilities. The SC design provides the low-cost arithmetic units, while suffering from long latency and accuracy degradation. The division operation is the most challenging in SC. Chen et al. have recently developed a stochastic divider, called correlated divider (CORDIV), by exploiting the conditional probability. It has been proved that the CORDIV has a lower hardware cost than the previous designs and provides good accuracy performance. This brief presents a new stochastic divider, which includes one saturating subtractor and one JK flip flop. The subtractor is designed by taking advantage of correlation among inputs. Simulation results reveal that the proposed divider has the same accuracy performance as CORDIV. However, the new divider has competitive advantages over CORDIV. With applications to the piecewise linear function implementation, the proposed design is superior to the finite state machine (FSM)-based method in terms of accuracy and hardware cost.",
       "doi": "10.1109/TCSII.2019.2906385",
       "url": "https://doi.org/10.1109/TCSII.2019.2906385",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-43",
@@ -1067,14 +1027,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) adopting probability as the medium, has been recently developed in the field of neural network (NN) accelerator due to simple hardware and high fault tolerance. However, traditional SC-based NN accelerators employ the bit-serial computation, and thus suffer from high latencies, random fluctuations and high hardware costs of bitstream number generators. In this brief, a novel parallel hybrid stochastic-binary-based NN (PHSB-NN) accelerator architecture manipulating the parallel thermometer coding is proposed. Parallel bitstream number generator and multiply accumulate (MAC) are also proposed, respectively, which can synchronously decode all bitstreams and complete the MAC computation in only one clock cycle. Compared with traditional SC-based NN accelerators, the proposed PHSB-NN accelerators can achieve 33.5× energy efficiency improvement without sacrificing the accuracy on the MNIST dataset, as demonstrated in the circuit synthesis results of the standard 14-nm FinFET technology.",
       "doi": "10.1109/TCSII.2020.2994464",
       "url": "https://doi.org/10.1109/TCSII.2020.2994464",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-44",
@@ -1091,14 +1050,13 @@
       ],
       "scope": "Combinatorial optimization",
       "innovation": "",
+      "abstract": "In this era of nanoscale technologies, the inherent characteristics of some nonvolatile devices, such as resistive random access memory (ReRAM), phase-change material (PCM), and spintronics, can emulate stochastic functionalities. Traditionally, these devices have been engineered to suppress the stochastic switching behavior as it poses reliability concerns for memory storage and logic applications. However, leveraging stochasticity in such devices led to a renewed interest in hardware-software codesign of stochastic algorithms since the CMOS-based implementations of stochastic algorithms involve cumbersome circuitry to generate “stochastic bits.” In this article, we consider two classes of problems: deep neural networks (DNNs) and combinatorial optimization. The rapidly growing demands of artificial intelligence (AI) have sparked an interest in energy-efficient implementations of large DNNs, with binary representations of synaptic weights and neuronal activities. Stochasticity plays an important role in leveraging the benefits of these binary representations, leading to model compression and optimization during training. In combinatorial optimization, such as graph coloring or traveling salesman problems, stochastic algorithms, such as the Ising computing model, have been shown to be effective. These problems require exhaustive computational procedures, and the Ising model uses a natural annealing agent to achieve near-optimal solutions in a reasonable timescale, without getting stuck in “local minima.” In this article, we present a broad review of stochastic computing utilizing the stochastic switching characteristics of devices based on nanoscale nonvolatile technologies. We show how to codesign of the devices and algorithms that can enable optimal solutions for both combinatorial problems and binary neural networks for local learning and inference. Directly mapping the nonvolatile device characteristics to the stochastic algorithms without the need for storing the bits in a separate memory leads to efficient use of hardware.",
       "doi": "10.1109/TVLSI.2020.2991679",
       "url": "https://doi.org/10.1109/TVLSI.2020.2991679",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-45",
@@ -1115,14 +1073,13 @@
       ],
       "scope": "Bayesian inference",
       "innovation": "",
+      "abstract": "Bayesian inference is an effective approach for solving statistical learning problems, especially with uncertainty and incompleteness. However, Bayesian inference is a computing-intensive task whose efficiency is physically limited by the bottlenecks of conventional computing platforms. In this paper, a spintronics-based stochastic computing (SC) approach is proposed for efficient Bayesian inference. The inherent stochastic switching behaviors of spintronic devices are exploited to build a stochastic bitstream generator (SBG) for SC with hybrid CMOS/magnetic tunnel junction (MTJ) circuits design. Aiming to improve the inference efficiency, an SBG sharing strategy is leveraged to reduce the required SBG array scale by integrating a switch network between SBG array and SC logic. A device-to-architecture level framework is proposed to evaluate the performance of spintronics-based Bayesian inference system (SPINBIS). Experimental results on data fusion applications have shown that SPINBIS could improve the energy efficiency about 12× than MTJ-based approach with 45% design area overhead and about 26× than FPGA-based approach.",
       "doi": "10.1109/TCAD.2019.2897631",
       "url": "https://doi.org/10.1109/TCAD.2019.2897631",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-46",
@@ -1139,14 +1096,13 @@
       ],
       "scope": "Field-programmable gate array (FPGA)",
       "innovation": "",
+      "abstract": "Invertible logic using a probabilistic magnetoresistive device model has been recently presented that can compute functions in bidirectional ways and solve several problems quickly, such as factorization and combinational optimization. In this article, we present a design framework for invertible logic circuits. Our approach makes use of linear programming to create a Hamiltonian library with the minimum number of nodes for small invertible-logic functions. In addition, as the device model is approximated based on stochastic computing in synthesizable SystemVerilog, a faster simulation using the compiled SystemC binary is realized than a conventional SPICE-level simulation and is verified using field-programmable gate array (FPGA) as prototyping. Using our design framework, several invertible-logic circuits are designed and emulated (verified) in SystemC, exhibiting five order-of-magnitude faster simulation than conventional work.",
       "doi": "10.1109/TCAD.2020.3003906",
       "url": "https://doi.org/10.1109/TCAD.2020.3003906",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-47",
@@ -1163,14 +1119,13 @@
       ],
       "scope": "Annealing processor",
       "innovation": "",
+      "abstract": "Nondeterministic polynomial time hard (NP-hard) combinatorial optimization problems (COPs) are intractable to solve using a traditional computer as the time to find a solution increases very rapidly with the number of variables. An efficient alternative computing method uses coupled spin networks to solve COP. This work presents a first-of-its-kind coupled ring oscillator (ROSC)-based scalable probabilistic Ising computer to solve NP-hard COPs. An integrated coupled oscillator network was designed with 560 ROSCs that mimic a coupled spin network. Each ROSC can be coupled to any of its neighbors using programmable back-to-back (B2B) inverter-based coupling mechanism. The ROSC-based spins and B2B inverter-based coupling were optimized to work under a wide range of system noise as well as voltage and temperature variations. Randomly generated 1000 max-cut problems were mapped and solved in the hardware. The integrated Ising computer produced satisfactory solutions of max-cut problems when compared with commercial software running on a CPU. Experiments show that the integrated CMOS-based Ising computer can find the solution to NP-hard problems with an accuracy of 82%-100%. In addition, the repeated measurements of the same problem showed that the Ising computer can traverse through several local minima to find high-quality solutions under various voltage and temperature variation conditions. The experimental results show that ROSCs are a potential candidate for a dedicated hardware accelerator aiming to solve a wide range of COPs.",
       "doi": "10.1109/JSSC.2021.3062821",
       "url": "https://doi.org/10.1109/JSSC.2021.3062821",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-48",
@@ -1187,14 +1142,13 @@
       ],
       "scope": "Deterministic approach",
       "innovation": "",
+      "abstract": "Deterministic approaches have recently been developed for accurate computation in stochastic computing (SC). They, however, suffer a long operation time. Fortunately, for applications that do not require completely accurate processing results, such as image processing, the time can significantly be reduced due to the better progressive precision in the bit-streams generated by these approaches. That means a computation can be terminated in time when its output accuracy is acceptable. Due to the fast convergence property of low-discrepancy sequences, we propose three deterministic Halton sequence (DHS)-based stochastic number generators (SNGs) for the first time by using, respectively, prime length, rotation, and clock division for accelerating computation in SC. Experimental results show that the proposed designs are more efficient than their counterparts. For multiplication, the proposed DHS-based designs perform up to $32\\times $ faster than prior designs for a mean error of 0.1%. The speedup reaches $128\\times $ for an edge detection algorithm. Three stochastic circuits are then designed by using the proposed DHS-based SNGs for the Bernsen binarization algorithm, which lead to more accurate results than existing designs at the same bit-stream length. Finally, the proposed designs show an excellent fault-tolerance against bit flipping errors.",
       "doi": "10.1109/TCSII.2021.3073680",
       "url": "https://doi.org/10.1109/TCSII.2021.3073680",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-49",
@@ -1211,14 +1165,13 @@
       ],
       "scope": "Memristors",
       "innovation": "",
+      "abstract": "Stochastic Computing (SC) is a computing paradigm that allows for the low-cost and low-power computation of various arithmetic operations using stochastic bit streams and digital logic. In contrast to conventional representation schemes used within the binary domain, the sequence of bit streams in the stochastic domain is inconsequential, and computation is usually non-deterministic. In this brief, we exploit the stochasticity during switching of probabilistic Conductive Bridging RAM (CBRAM) devices to efficiently generate stochastic bit streams in order to perform Deep Learning (DL) parameter optimization, reducing the size of Multiply and Accumulate (MAC) units by 5 orders of magnitude. We demonstrate that in using a 40-nm Complementary Metal Oxide Semiconductor (CMOS) process our scalable architecture occupies 1.55mm2 and consumes approximately 167 μW when optimizing parameters of a Convolutional Neural Network (CNN) while it is being trained for a character recognition task, observing no notable reduction in accuracy post-training.",
       "doi": "10.1109/TCSII.2021.3065932",
       "url": "https://doi.org/10.1109/TCSII.2021.3065932",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-50",
@@ -1235,14 +1188,13 @@
       ],
       "scope": "Approximate computing",
       "innovation": "",
+      "abstract": "This work presents adder and subtracter architectures for stochastic computing (SC). In contrast to standard approaches, the result of their operation is nonscaling, i.e., X ± Y, and this is achieved via a deterministic operation based on a counting process. These properties result in an improved tradeoff between accuracy and stochastic sequence length, fast convergence, and the potential for cascaded, scale-dependent (e.g., nonlinear) stochastic computations providing with flexibility on the design level. The architectures are modeled using Markov chains (MCs) allowing for detailed understanding of their proper operation supported with analytical derivations. Using modified MC models, the adder and subtracter's internal register size is analytically calculated providing guidelines for its optimal size selection based on accuracy requirements and stochastic input sequences lengths. Both architectures are simulated in MATLAB and are designed in Synopsys to compare their performance to that of existing ones in terms of computational accuracy and hardware resources. Finally, to demonstrate the adder's efficacy, we use it as a building block to realize a 3×3 convolution kernel and then perform a standard digital image processing task. The results are compared to those achieved using adder architectures from the SC literature.",
       "doi": "10.1109/TVLSI.2021.3095353",
       "url": "https://doi.org/10.1109/TVLSI.2021.3095353",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-51",
@@ -1259,14 +1211,13 @@
       ],
       "scope": "Stochastic computing (SC)",
       "innovation": "",
+      "abstract": "Max & min architectures for stochastic computing (SC) are introduced. Their key characteristic is the utilization of an accumulator to store the signed difference between the two inputs, without randomizing sources. This property results in fast-converging and highly accurate computations using short sequence lengths, improving on the latency–accuracy tradeoff of existing SC max–min architectures. The operation of the proposed architectures is modeled using Markov Chains, resulting in in-depth analysis, the derivation of their statistical properties, and guidelines for selecting the register’s size to achieve overall design optimization. The computational accuracy and the hardware requirements of the proposed architectures are compared to those of existing ones in the SC literature, using MATLAB and Synopsys Tools. The efficacy of the proposed architectures is demonstrated by realizing a $3 \\times 3$ median filter and using it in an image processing application.",
       "doi": "10.1109/TVLSI.2021.3114424",
       "url": "https://doi.org/10.1109/TVLSI.2021.3114424",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-52",
@@ -1283,14 +1234,13 @@
       ],
       "scope": "Divider",
       "innovation": "",
+      "abstract": "Due to the low complexity in arithmetic unit design, stochastic computing (SC) has attracted considerable interest to implement Artificial Neural Networks (ANNs) for resources-limited applications, because ANNs must usually perform a large number of arithmetic operations. To attain a high computation accuracy in an SC-based ANN, extended stochastic logic is utilized together with standard SC units and thus, a stochastic divider is required to perform the conversion between these logic representations. However, the conventional divider incurs in a large computation latency, so limits an SC implementation for ANNs used in applications needing high performance. Therefore, there is a need to design fast stochastic dividers for SC-based ANNs. Recent works (e.g., a binary searching and triple modular redundancy (BS-TMR) based stochastic divider) are targeting a reduction in computation latency, while keeping the same accuracy compared with the traditional design. However, this divider still requires $N$ iterations to deal with $2^{N}$ -bit stochastic sequences, and thus the latency increases in proportion to the sequence length. In this paper, a decimal searching and TMR (DS-TMR) based stochastic divider is initially proposed to further reduce the computation latency; it only requires two iterations to calculate the quotient, so regardless of the sequence length. Moreover, a trade-off design between accuracy and hardware is also presented. An SC-based Multi-Layer Perceptron (MLP) is then considered to show the effectiveness of the proposed dividers over current designs. Results show that when utilizing the proposed dividers, the MLP achieves the lowest computation latency while keeping the same classification accuracy; although incurring in an area increase, the overhead due to the proposed dividers is low over the entire MLP. When using as combined metric for both hardware design and computation complexity the product of the implementation area, latency, power and number of clock cycles, the proposed designs are also shown to be superior to the SC-based MLPs (at the same level of accuracy) employing other dividers found in the technical literature as well as the commonly used 32-bit floating point implementation.",
       "doi": "10.1109/TCSI.2021.3103926",
       "url": "https://doi.org/10.1109/TCSI.2021.3103926",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-53",
@@ -1307,14 +1257,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "The divider is one of the most complex hardware units in Stochastic Computing (SC); even though several new designs have been presented to reduce the computation latency of the conventional divider, all of them still require a considerable number of clock cycles. Moreover, they incur in low performance due to the employed arithmetic computational scheme. In this paper, a Delta Sigma Modulator (DSM) based stochastic divider is proposed. As an entirely digital circuit, the proposed divider offers the best computation latency and accuracy over all existing stochastic dividers found in the technical literature (with a typical reduction between 66.8% and 96.9% in the number of clock cycles and a reduction from $10^{\\mathrm {-3.4}}$ to $10^{\\mathrm {-3.9}}$ in the average mean square error for a 10-bit resolution). An SC-based Neural Network (NN) is considered as an initial case study to evaluate the advantages of the proposed design in an emerging application; results show that the proposed divider enables an SC-based NN to achieve a higher classification accuracy and hardware efficiency than existing designs. To show the flexibility of the proposed divider design, its application to Sobol-based sequences is also presented; also in this case, its superiority over other designs is confirmed. These features make the proposed design very attractive for hardware-constrained platforms; moreover, such a novel design approach that incorporates ideas from analog/mixed signal circuit design into a digital circuit design, can motivate other researchers to design efficient SC designs using similar schemes.",
       "doi": "10.1109/TCSI.2022.3168286",
       "url": "https://doi.org/10.1109/TCSI.2022.3168286",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-54",
@@ -1331,14 +1280,13 @@
       ],
       "scope": "MTJ",
       "innovation": "",
+      "abstract": "This paper presents a full hardware implementation of a magnetic tunnel junction based stochastic tunable bitstream generator. It provides highly accurate control of the switching probability, while showing important robustness to process and temperature variations. We propose a new architecture of sensing scheme based on the pre-charged sense amplifier approach that uses an asynchronous digital module to control the internal signals of the sense amplifier with the purpose of improving the reliability against the timing hazards and reducing the power consumption by detecting the end of the reading to stop the required static currents. The circuit also features a digital feedback loop that analyzes the output bitstream and adapt the current in such a way that the bitstream encodes precisely the required probability. This circuit features an important bit generation rate at a low energy cost. Based on an exhaustive characterization of the circuit, we provide a behavioral description in Verilog, with timing and power files to be integrated as a standard cell in the digital design flow for application level evaluation of the performance. Thus, we also provide a design and evaluation flow from device to digital level of abstraction.",
       "doi": "10.1109/TCSI.2022.3173030",
       "url": "https://doi.org/10.1109/TCSI.2022.3173030",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-55",
@@ -1355,14 +1303,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "By utilizing stochastic computing (SC), the hardware consumption of convolutional neural networks (CNNs) can be decreased significantly. However, long stream length is required to produce acceptable results, which leads to extended computation time. As a result, the inherent random fluctuation error and long latency of processing random bitstreams have made previous SC-CNN implementations inefficient compared with conventional binary designs. To address these issues, in this brief, an efficient convolution architecture based on fast FIR algorithm (FFA) is proposed by employing FFA to reduce the computational complexity. Further, the combination of two-line SC and Sobol sequences is applied to decrease the processing cycles. The functional simulation targeting LeNet-5 with MNIST dataset and RTL synthesis results show that the proposed design yields higher area efficiency than previous SC-based ones and achieves 64%, 11% higher efficiency in area and energy compared to the 5-bit fixed-point design while maintaining comparable accuracy.",
       "doi": "10.1109/TCSII.2021.3121081",
       "url": "https://doi.org/10.1109/TCSII.2021.3121081",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-56",
@@ -1379,14 +1326,13 @@
       ],
       "scope": "Deep neural networks (DNNs)",
       "innovation": "",
+      "abstract": "To accelerate the computation of deep neural networks (DNNs), their hardware implementations have been extensively explored. Stochastic computing (SC) is recognized as an efficient computing paradigm that can be adopted to design low-complexity architectures for DNNs. However, most of the reported SC-DNNs suffer from long latency. Recently, a novel SC scheme called wire spreading has been proposed to address the issue of latency, delivering fully parallel SC-DNN architectures. This brief aims to further reduce the hardware complexity of the wire-spread-based SC-DNNs (WSSC-DNNs). By investigating the bit distribution, we first propose a consecutive bit compression (CBC) method without introducing any accuracy loss. Moreover, another method called approximate compression (AC) is presented to reduce the number of wires at the expense of acceptable accuracy loss. These two compression methods are compatible and therefore can be utilized simultaneously. In the experiment for SqueezeNet on CIFAR10, it shows that the proposed methods can save up to 70.6% area cost and 67.0% power consumption.",
       "doi": "10.1109/TCSII.2022.3191670",
       "url": "https://doi.org/10.1109/TCSII.2022.3191670",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-57",
@@ -1403,14 +1349,13 @@
       ],
       "scope": "High error rate keys (HERKs)",
       "innovation": "",
+      "abstract": "Logic locking is a design-for-security scheme to thwart attacks by an untrusted foundry. Prior work exposed the vulnerability of logic-locked circuits using Boolean satisfiability (SAT). While these attacks are effective against deterministic circuits, they cannot unlock probabilistic/approximate designs, which have become increasingly popular. In this work, we expand SAT-style attacks to locked circuits with a probabilistic behavior. We propose StatSAT, an attack incorporating statistical techniques into the SAT attack to unlock probabilistic designs. We then propose a countermeasure, called high error rate keys (HERKs), to thwart StatSAT and other attacks on probabilistic circuits. HERKs leverage high error wires, caused by the probabilistic behavior, to hide the correct key under stochastic noise.",
       "doi": "10.1109/TCAD.2021.3104270",
       "url": "https://doi.org/10.1109/TCAD.2021.3104270",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-58",
@@ -1427,14 +1372,13 @@
       ],
       "scope": "LDPC code",
       "innovation": "",
+      "abstract": "The ultra-low hardware consumption feature of stochastic decoding has made it a potential candidate for the implementation of low-density parity-check(LDPC) decoders. However, the existing stochastic LDPC decoders still suffer from performance degradation and relatively high decoding cycles caused by the correlation among stochastic bit streams. In this paper, we propose Hybrid Stochastic(HS) decoding, which achieves high performance, high throughput, and high hardware efficiency by jointly using our proposed novel stochastic check node(CN) and Two’s Complement(TCS) variable node(VN) to realize Min-Sum Algorithm(MSA) and its enhancements. Fully correlated stochastic bit streams are used to entirely eliminate the indeterminacy caused by the correlation, which results in high performance and fast convergence and inherits the low complexity of stochastic decoders at the same time. We demonstrate the HS decoding by designing a (2048,1723) decoder in a 65 nm process, which achieves the highest Bit-Error-Ratio(BER) performance, highest throughput, and top hardware efficiency among existing stochastic LDPC decoders. We also demonstrate that HS decoding can achieve excellent decoding performance for different code rates and lengths 5G New Radio(NR) LDPC codes. Thus, HS decoding can be adopted in wide applications.",
       "doi": "10.1109/TCSI.2022.3179282",
       "url": "https://doi.org/10.1109/TCSI.2022.3179282",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-59",
@@ -1451,14 +1395,13 @@
       ],
       "scope": "Convolutional neural network",
       "innovation": "",
+      "abstract": "The appealing property of low area, low power, and high bit error tolerance has made Stochastic Computing (SC) a promising alternative to conventional binary arithmetic for many computation intensive tasks, e.g., convolutional neural networks (CNNs). However, current SC-based CNN accelerators suffer from the intrinsic computation error and exponentially growing latency. In this work, we optimize both the architecture of SC multiply-and-accumulate (MAC) unit and the overall acceleration strategy of CNN accelerator to favor SC. A low-complexity bit-stream-extending method is proposed to suppress the computation error of SC and ensure the trained fix-point model can be deployed into SC-based hardware without fine-tuning. Besides, distribution-determined partition scheme is developed to design hybrid stochastic-binary computing (SBC) MAC unit which boosts the processing of bit streams at a minimum overhead. For the overall accelerator, the SBC-based MAC array is extended to reuse hardware resources and improve throughput, since the judiciously chosen loop unrolling strategy can better benefit SC operations. The proposed CNN accelerator with extended SBC-MAC array is synthesized and validated using TSMC 28nm CMOS on several representative CNNs, targeted at ImageNet dataset. Compared with precise binary implementation, our proposed design gains 44% area reduction and 50% power saving but induces only 4% additional computation latency and 0.5% accuracy degradation.",
       "doi": "10.1109/TCSI.2022.3166524",
       "url": "https://doi.org/10.1109/TCSI.2022.3166524",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-60",
@@ -1475,14 +1418,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Non-scaling Stochastic Computing adder and subtracter architectures are introduced. They are modeled using Markov Chains to obtain important statistical properties enabling their design optimization. To demonstrate their efficacy, they are used to realize a stochastic computing-based image sharpening filter which is simulated in MATLAB and Synopsys. The filter’s computational efficiency is showcased with standard image processing metrics while its hardware resources are compared to those of the standard binary filter, highlighting the advantages of the proposed approach.",
       "doi": "10.1109/TCSII.2022.3161991",
       "url": "https://doi.org/10.1109/TCSII.2022.3161991",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-61",
@@ -1499,14 +1441,13 @@
       ],
       "scope": "Accelerators",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) has recently emerged as a promising method for efficient machine learning acceleration. Its high compute density, affinity with dense linear algebra primitives, and approximation properties have an uncanny level of synergy with the deep neural network computational requirements. However, there is a conspicuous lack of works trying to integrate SC hardware with sparsity awareness, which has brought significant performance improvements to conventional architectures. In this work, we identify why common sparsity-exploiting techniques are not easily applicable to SC accelerators and propose a new architecture—SASCHA—sparsity-aware SC hardware architecture for the neural network acceleration that addresses those issues. SASCHA encompasses a set of techniques that make utilizing sparsity in inference practical for different types of SC computation. At 90% weight sparsity, SASCHA can be up to $6.5\\times $ faster and $5.5\\times $ more energy-efficient than comparable dense SC accelerators with a similar area without sacrificing the dense network throughput. SASCHA also outperforms sparse fixed-point accelerators by up to $4\\times $ in terms of latency. To the best of our knowledge, SASCHA is the first SC accelerator architecture oriented around sparsity.",
       "doi": "10.1109/TCAD.2022.3197503",
       "url": "https://doi.org/10.1109/TCAD.2022.3197503",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-62",
@@ -1523,14 +1464,13 @@
       ],
       "scope": "Amplitude and frequency encoding (AFE)",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a type of logic computation based on stochastic bit stream instead of the binary numbers (BNs). It is pseudo-analog computation in the digital domain that can realize multiplication, addition, and complex function computations. In this brief, a new encoding method, referred to as amplitude and frequency encoding (AFE) for SC, is presented. It extends SC to use multibit streams instead of bit streams to represent data. This method still uses the expectation of streams to achieve computation. Compared with the conventional stochastic bit stream, AFE realizes low-latency and low-area occupation than the conventional SC method. The rationality of the circuits is also examined from a mathematical perspective. The hardware logic circuit of AFE SC, including the multiplier, adder, and converter, was designed and implemented by a field-programmable gate array (FPGA). In addition, the latency of the computing, area, and precision of AFE SC was measured based on the FPGA board.",
       "doi": "10.1109/TVLSI.2022.3150569",
       "url": "https://doi.org/10.1109/TVLSI.2022.3150569",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-63",
@@ -1547,14 +1487,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic Computing (SC) is an alternative computing paradigm that promises high robustness to noise and outstanding area- and power-efficiency compared to traditional binary. It also enables the design of fully parallel and scalable computations. Despite its advantage, SC suffers from long latency and high energy consumption compared to conventional binary computing, especially with current CMOS technology. The cost of conversion between binary and stochastic representation takes a significant cost with CMOS circuits. In-Memory Computation (IMC) is introduced to accelerate Big Data applications by removing the data movement between memory and processing units, and by providing massive parallelism. In this work, we explore the efforts in employing IMC for fast and energy-efficient SC system design. We specially focus on memristors as an emerging technology that promises efficient memory and computation beyond CMOS. We discuss the potentials and challenges for realizing efficient SC systems in memory.",
       "doi": "10.1109/TCSII.2022.3161995",
       "url": "https://doi.org/10.1109/TCSII.2022.3161995",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-64",
@@ -1571,14 +1510,13 @@
       ],
       "scope": "Memristors",
       "innovation": "",
+      "abstract": "We introduce an approach based on the Chapman-Kolmogorov equation to model heterogeneous stochastic circuits; namely, the circuits combining binary or multi-state stochastic memristive devices and continuum reactive components (capacitors and/or inductors). These circuits are described in terms of occupation probabilities of memristive states that are functions of reactive variables. As an illustrative example, the series circuit of a binary memristor and capacitor is considered in detail. Some analytical solutions are found. Our work offers a novel analytical/numerical tool for modeling complex stochastic networks, which may find a broad range of applications.",
       "doi": "10.1109/TCSII.2021.3091437",
       "url": "https://doi.org/10.1109/TCSII.2021.3091437",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-65",
@@ -1595,14 +1533,13 @@
       ],
       "scope": "Binary similarity",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a re-emerging approach adopted in vision and learning machines. SC, as a hardware-efficient unconventional computation paradigm, utilizes digital logic systems for arithmetic operations. Conventional logic gates are fed binary streams that hold corresponding pulse probabilities. The similarity between binary input pulses is crucial to the correlation. In this brief, the utilization of a contingency table (CT) in an SC simulation is proposed as a main contribution. The CT manipulates input scalars to perform SC-based logic operations, which avoids lengthy bit-by-bit bitstream processing. After positive and negative correlation tuning via CT, three different approaches to emulate uncorrelated bitstreams are studied. Taking advantage of the ease of a memory- and runtime-efficient CT, correlation occurrence and error analyses are thoroughly discussed. The ability to use a CT for all input combinations instead of bitwise processing in any simulation environment is ascertained.",
       "doi": "10.1109/TCSII.2022.3146238",
       "url": "https://doi.org/10.1109/TCSII.2022.3146238",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-66",
@@ -1619,14 +1556,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional computing paradigm, which processes numerical values through stochastic bitstreams. This representation can be interpreted as probabilities and makes stochastic circuits implemented with simple logic gates. This brief proposes a stochastic weighted-adder based approach for computing polynomials by using correlation logic in unipolar format. This approach can significantly reduce the use of RNGs to lower hardware cost and can handily compute polynomials with arbitrary coefficients. Experimental results show that the proposed designs outperform previous counterparts in computing accuracy and hardware cost. For example, the $5^{th}$ -order Maclaurin polynomial of the sigmoid( ${x}$ ) that contains positive and negative coefficients can have at least an 87% improvement in mean squared error and a 21% reduction in area.",
       "doi": "10.1109/TCSII.2022.3194168",
       "url": "https://doi.org/10.1109/TCSII.2022.3194168",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-67",
@@ -1643,14 +1579,13 @@
       ],
       "scope": "Markov chain (MC) modeling",
       "innovation": "",
+      "abstract": "A general methodology to derive analytically the statistical properties of stochastic computing finite-state machines (SFSMs) is introduced. The SFSMs, expressed as Moore ones, are modeled using Markov Chains (MCs), enabling the derivation in closed form of their output sequences’ statistical properties, including their expected value, their auto- and cross-correlation, their auto- and cross-covariance, their variance and standard deviation as well as their mean squared error. An MC overflow/underflow probability model accompanies the methodology, allowing to calculate analytically the expected number of steps before overflows/underflows, setting the guidelines to select the register’s size that reduces erroneous bits originating from them. In the proposed methodology both the input sequence length and the number of the SFSMs’ states are considered as parameters, accelerating the overall design procedure as the necessity for multiple time-consuming numerical simulations is eliminated. The proposed methodology’s accurate modeling capabilities are demonstrated with its application in two SFSMs selected from the stochastic computing literature, while comparisons with the numerical experiments justify its correctness.",
       "doi": "10.1109/TCAD.2022.3211487",
       "url": "https://doi.org/10.1109/TCAD.2022.3211487",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-68",
@@ -1667,14 +1602,13 @@
       ],
       "scope": "DNN",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) has become a promising approximate computing solution by its negligible resource occupancy and ultralow energy consumption. As a potential replacement of accurate multiplication, SC can dramatically mitigate the problematic power consumption by DNNs. However, current SC-multipliers illustrate an extremely imbalanced accuracy across product space, i.e., neglectable noise with large products but significant noise for small ones, which is discordant to the distribution of products by the sparse matrix in neural computing. In this article, we present a heterogeneous SC-multiplier that heuristically performs three divergent approximating multiplication, including “set-to-0,” “look-up-table,” and “low-discrepancy-SC,” for appropriate precision-provision in the whole space of products. Due to those popular DNN models cannot achieve consensus on the boundaries of above operations, a training-involved method is proposed to determine the settings with limited overhead. In this way, those models successively learn the SC-operation characters and exhibit a definitely improvement on network precision. The experiment shows that, for single multiplication, the product noise can be restrained by 36.86% on average, and for multiplication in multiple network models, the accuracy improvement reaches to 5.5% on average. Furthermore, a group of proposed logic-reduction techniques can improve the energy efficiency by 65% in the system-level evaluation.",
       "doi": "10.1109/TCAD.2022.3178053",
       "url": "https://doi.org/10.1109/TCAD.2022.3178053",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-69",
@@ -1691,14 +1625,13 @@
       ],
       "scope": "Computer-aided simulation",
       "innovation": "",
+      "abstract": "The rapid computerized simulation of stochastic computing (SC) systems is a challenging problem. A method for agile simulation of SC image processing is proposed in this work. The input operands are processed with the aid of a correlation-controlled contingency table (CT) construct without using actual stochastic bit-streams. The proposed approach underlines the validity of CT simulation with 1) image compositing; 2) pattern detection; and 3) bilinear interpolation case studies. Using the corresponding error models, we emulate the state-of-the-art pseudo-random and quasi-random bit-streams. Experimental results show that the proposed approach achieves similar computation accuracy to the traditional SC simulation while performing runtime- and memory-efficient computations. The execution time reduces more than $200\\times $ for the image compositing task when emulating random bit-streams with CT. Pattern detection and bilinear interpolation further showed $76\\times $ and $22\\times $ lower memory usage, respectively, when employing CT.",
       "doi": "10.1109/TCAD.2023.3243136",
       "url": "https://doi.org/10.1109/TCAD.2023.3243136",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-70",
@@ -1715,14 +1648,13 @@
       ],
       "scope": "Energy-efficiency",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) typically requires a low design complexity compared with weighted binary computing, so it has been successfully applied in neural networks (NNs). Usually, SC utilizes random bitstreams as its medium, which makes it suffer from a long delay that offsets its advantages. This drawback can be alleviated by utilizing parallel datapaths, which, however, will significantly increase the hardware cost due to the requirement of multiple parallel computing units. In this article, a hybrid bit-splitting generator (HBSG) is proposed to efficiently produce parallel bitstreams in a single clock cycle to reduce delay. The HBSG uniformly splits binary numbers into R segments, each of which is encoded in parallel by using hardwired connections according to the weight of each bit. A binary-interfaced parallel stochastic multiplier (BipSMul) using the HBSG is then proposed to accelerate the multiplication in SC. Experimental results show that the BipSMul is more energy efficient than the state-of-the-art parallel and serial stochastic designs, as well as their binary and Booth counterparts, in delay, power-delay product (PDP), and area-delay product (ADP).",
       "doi": "10.1109/TVLSI.2023.3247739",
       "url": "https://doi.org/10.1109/TVLSI.2023.3247739",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-71",
@@ -1739,14 +1671,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic circuits use randomly distributed bitstreams to represent numbers, so leading to small areas and low power dissipation. However, it does not only result in a long latency and thus increases energy, but also reduces computing accuracy. In this brief, a design of parallel stochastic multipliers with high accuracy and low energy is proposed. To this end, an algorithm for finding optimal multiplicative bitstreams (OpMulbs) is developed for multipliers. Experimental results show that the proposed parallel multipliers using OpMulbs are the most accurate among currently available stochastic multipliers. They also require much less energy with a smaller latency, compared to the others. With a mean squared error of $4.02{\\times } 10^{-6}$ , the proposed 8-bit multiplier shows a 42.18%, 48.15%, 20.35%, and 55.56% reduction in area, power, latency, and energy, respectively, compared to an 8-bit exact binary multiplier. The applications in multiply-accumulate units and image processing algorithms show that the proposed multipliers outperform the state-of-the-art stochastic designs in several considered criteria and binary designs in hardware cost.",
       "doi": "10.1109/TCSII.2022.3210035",
       "url": "https://doi.org/10.1109/TCSII.2022.3210035",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-72",
@@ -1763,14 +1694,13 @@
       ],
       "scope": "Machine learning",
       "innovation": "",
+      "abstract": "Deep learning has grown in capability and size in recent years, prompting research on alternative computing methods to cope with the increased compute cost. Stochastic computing (SC) promises higher compute efficiency with its compact compute units, but accuracy issues have prevented wide adoption, and accuracy-improving techniques have sacrificed runtime or training performance. In this work, we propose extended range SC—Range-Extended SC Accumulation to deal with the accuracy issues of SC. By modifying the functionality of OR-based SC accumulation, we increase SC computation accuracy without sacrificing the performance benefits. Our approach achieves a $2\\times $ reduction in stream length for the same accuracy compared to SC with OR-based accumulation and an up to $3.6\\times $ improvement in energy compared to SC with binary addition. With proper modeling, our approach improves training performance for SC-based neural networks and makes training SC models practical for large datasets like ImageNet.",
       "doi": "10.1109/TCAD.2023.3284289",
       "url": "https://doi.org/10.1109/TCAD.2023.3284289",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-73",
@@ -1787,14 +1717,13 @@
       ],
       "scope": "In-DRAM processing",
       "innovation": "",
+      "abstract": "Transformers have emerged as a powerful tool for natural language processing (NLP) and computer vision. Through the attention mechanism, these models have exhibited remarkable performance gains when compared to conventional approaches like recurrent neural networks (RNNs) and convolutional neural networks (CNNs). Nevertheless, transformers typically demand substantial execution time due to their extensive computations and large memory footprint. Processing in-memory (PIM) and near-memory computing (NMC) are promising solutions to accelerating transformers as they offer high-compute parallelism and memory bandwidth. However, designing PIM/NMC architectures to support the complex operations and massive amounts of data that need to be moved between layers in transformer neural networks remains a challenge. We propose ARTEMIS, a mixed analog-stochastic in-DRAM accelerator for transformer models. Through employing minimal changes to the conventional DRAM arrays, ARTEMIS efficiently alleviates the costs associated with transformer model execution by supporting stochastic computing for multiplications and temporal analog accumulations using a novel in-DRAM metal-on-metal capacitor. Our analysis indicates that ARTEMIS exhibits at least $3.0\\times $ speedup, and $1.8\\times $ lower energy compared to GPU, TPU, CPU, and state-of-the-art PIM transformer hardware accelerators.",
       "doi": "10.1109/TCAD.2024.3446719",
       "url": "https://doi.org/10.1109/TCAD.2024.3446719",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-74",
@@ -1811,14 +1740,13 @@
       ],
       "scope": "Image binarization",
       "innovation": "",
+      "abstract": "Binarization plays a key role in image processing. Its performance directly affects the success of subsequent character segmentation and recognition. The Phansalkar algorithm performs excellent in processing heavily degraded or poor-quality images. However, this algorithm incurs significant hardware costs. In this article, efficient stochastic computing (SC) functions and an architecture are proposed for the Phansalkar algorithm. Highly accurate stochastic elements are designed for this architecture, including a stochastic mean circuit (SMC), a stochastic unipolar subtractor (USUB), a stochastic square root circuit (SQRT), and a stochastic exponential circuit (SEXP). Simulation results show that the SC architecture using 64-bit streams for the Phansalkar algorithm provides sufficient accuracy. Physical implementation indicates the effectiveness of the proposed architecture in lowering hardware costs for this algorithm compared with the binary counterpart.",
       "doi": "10.1109/TVLSI.2023.3348809",
       "url": "https://doi.org/10.1109/TVLSI.2023.3348809",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-75",
@@ -1835,14 +1763,13 @@
       ],
       "scope": "Approximate computing",
       "innovation": "",
+      "abstract": "This article presents novel designs for stochastic computing (SC)-based dividers, which promise low latency, high energy efficiency, as well as high accuracy for error-tolerant arithmetic operations. We first introduce CBDIV, which is based on the recently proposed counter-based SC concept and correlation-based SC to perform division. Then, we introduce FSCDIV, which further improves the accuracy of CBDIV by applying a scaling strategy and mitigating the latency by optimizing the counting scheme. The FSCDIV will equally scale up the divider and dividend before the division process, and thereby avoid large relative error when both input values of the divider and dividend are small. The proposed fast counting method accelerates FSCDIV by counting new bit pair (0–1 pair) among only half of the stochastic number bitstream instead of the entire bitstream, resulting in almost half of the counting latency and one-fourth of the overall division operation latency. The experimental results demonstrate that the proposed CBDIV, implemented in a 32-nm technology node, outperforms state-of-the-art works by 77.8% in accuracy, 37.1% in delay, 21.5% in area, 50.6% in area delay product (ADP), and 25.9% in power consumption. Compared to the fixed-point division baseline, CBDIV also achieves a 31.9% reduction in energy consumption and is more energy efficient than existing SC-based dividers for binary inputs and outputs required in efficient image processing implementations. Moreover, we demonstrate that FSCDIV improves delay by 56.4%, ADP by 16.0%, energy consumption by 45.0%, and accuracy by 61.2%. We also evaluate CBDIV and FSCDIV designs in a contrast stretch image processing workload, and the results show that the proposed designs can improve the image quality by up to 18.3 dB on average when compared to state-of-the-art works.",
       "doi": "10.1109/TCAD.2024.3365426",
       "url": "https://doi.org/10.1109/TCAD.2024.3365426",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-76",
@@ -1859,14 +1786,13 @@
       ],
       "scope": "Application-specific integrated circuit (ASIC)",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is unique in that it is a type of arithmetic computation based on stochastic numbers (bitstream) instead of binary numbers (BNs). Stochastic number (SN) represents and carries information in the form of pseudo-analog probabilities by CMOS gate circuits. The renewed success of the stochastic number system is mainly related to super low power consumption and high reliability for edge computing. In fact, the stochastic number is a nonpositional number representation that is intrinsically sequential and consequently used for certain important arithmetic operations (such as addition/subtraction and multiplication), and corresponds to a super low area circuit. This article proposes a novel hybrid number system of BNs and stochastic number representation, called hybrid stochastic number (HSN). This study introduces the basic theoretical aspects of the HSN and demonstrates the properties of hybrid stochastic computing (HSC). The hardware implementation of deep neural network with HSC is fabricated using a standard 40-nm low-power CMOS process, with a core area of 0.53 mm2, power of 102.3 mW, and clock of 400 MHz, which has 4544 multiply accumulation operations (MACs).",
       "doi": "10.1109/TVLSI.2023.3332170",
       "url": "https://doi.org/10.1109/TVLSI.2023.3332170",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-77",
@@ -1883,14 +1809,13 @@
       ],
       "scope": "p-bit",
       "innovation": "",
+      "abstract": "Probabilistic computing is a promising computational paradigm that harnesses the inherent stochasticity of devices to tackle problems that can benefit from stochastic-driven search. A probabilistic bit (p-bit), the workhorse of probabilistic computing, is popularly implemented using energy-efficient low-barrier nanomagnets, highly-scaled transistors, and unstable memory elements. These implementations are prone to process- and environmental-induced variations and aging-induced non-idealities. These non-idealities can manifest as unwanted bias in a p-bit and its incoming signals, impacting the figures of merit of probabilistic computing. For the first time, this work systematically investigates this aspect of probabilistic computing. First, we investigate the behavior of a non-ideal p-bit using an analytical model proposed in this work and corroborate the results using numerical computation. Then, we examine the impact of these non-idealities on the functionality and robustness of the probabilistic computing using Boolean logic implementation and image completion networks in the forward and backward modes of operation, respectively. For Boolean logic implementation, the weight matrix is found to be robust enough to allow p-bit network to retain its intended functionality despite non-idealities. Moreover, we show that there can be canceling effects of non-idealities, which can potentially be utilized in compensating reliability-induced degradation in a p-bit network. Additionally, using 1T-1MTJ-based p-bit implementation and SPICE simulations, we illustrate the applicability of the proposed model in analyzing and assessing the impact of non-idealities and process-induced variations on a p-bit network. We also demonstrate that statistical analysis techniques, such as Monte Carlo simulations, can help derive application-dependent constraints on the non-ideality of p-bits. These constraints will serve as critical design criteria for future p-bit implementations.",
       "doi": "10.1109/TCSI.2024.3461770",
       "url": "https://doi.org/10.1109/TCSI.2024.3461770",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-78",
@@ -1907,14 +1832,13 @@
       ],
       "scope": "SRAM",
       "innovation": "",
+      "abstract": "Markov chain Monte Carlo (MCMC) is a widely used sampling method in modern artificial intelligence and probabilistic computing systems. It involves repetitive random number generations and thus often dominates the latency of probabilistic model computing. Hence, we propose a compute-in-memory (CIM) based MCMC design as a hardware acceleration solution. This work investigates SRAM bitcell stochasticity and proposes a novel “pseudo-read” operation, based on which we offer a block-wise random number generation circuit scheme for fast random number generation. Moreover, this work proposes a novel multi-stage exclusive-OR gate (MSXOR) design method to generate strictly uniformly distributed random numbers. The probability error deviating from a uniform distribution is suppressed under $10^{-6}$ . Also, this work presents a novel in-memory copy circuit scheme to realize data copy inside a CIM sub-array, significantly reducing the use of R/W circuits for power saving. Evaluated in a commercial 28-nm process development kit, this CIM-based MCMC design generates 4-bit $\\sim $ 32-bit samples with an energy efficiency of 0.53 pJ/sample and high throughput of up to 1066.7M samples/s. Compared to conventional processors, the overall energy efficiency improves $2.12\\times 10^{9}$ to $9.58\\times 10^{9}$ times.",
       "doi": "10.1109/TCSI.2023.3337529",
       "url": "https://doi.org/10.1109/TCSI.2023.3337529",
       "has_analysis": false,
       "has_pdf": true,
       "has_work": false,
-      "oa_status": "mirrored",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": "mirrored"
     },
     {
       "id": "paper-79",
@@ -1931,14 +1855,13 @@
       ],
       "scope": "Approximate computing",
       "innovation": "",
+      "abstract": "Event-based cameras offer low latency and high-dynamic range imaging data in a sparse format that is well-suited for high-speed object tracking. Processing this sparse data in the same way as traditional camera data requires a great deal of unnecessary computation, making it difficult to take advantage of the high-effective frame rate for real-time processing. In this work, we propose an accelerator for high-speed object tracking on event-based camera data. SCIMITAR combines digital in-memory stochastic computing, in-situ stochastic stream generation, and multiple optimizations for utilizing input sparsity. SCIMITAR provides unparalleled performance with latency and energy that scale with sparsity. We demonstrate SCIMITAR performance on an object tracking application using circuit-level simulations of custom-designed compute-in-memory (CIM) macros and digital circuits. We achieve a frame processing rate of 26k frames/s with 100 regions-of-interest per frame and equivalent or better than state-of-the-art tracking accuracy. The accelerator achieves a peak throughput of 71 TOP/S and energy efficiency of 733 to 1702 TOP/S/W demonstrated on a range of event-based vision datasets, which is $5\\times $ higher than other CIM solutions.",
       "doi": "10.1109/TCAD.2024.3448227",
       "url": "https://doi.org/10.1109/TCAD.2024.3448227",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-80",
@@ -1955,14 +1878,13 @@
       ],
       "scope": "Memristor",
       "innovation": "",
+      "abstract": "In this paper, we study the stochastic state trajectory and conductance distributions of memristors under periodic pulse excitation. Our results, backed by experimental evidence, reveal that practical memristors exhibit a $1/f^{2}$ Brownian noise power spectrum. Based on this, we develop a Memristive Distribution Generator (MDG) circuit that produces tunable analog distributions by exploiting the physical stochasticity of memristors. By encoding the prior distributions of Bayesian problems in the physical output samples of these circuits, we demonstrate that Monte-Carlo sampling can be devised without knowledge of the analytical output distribution of the memristor. Using examples of 1-D Bayesian linear regression and a dynamic 2-D nonlinear localisation problem, we show how MDG circuits can act as a tunable source of randomness, efficiently representing distributions of interest. Our results, obtained using Pt/TiO2/Pt memristors, validate the use of memristor-based MDGs for implementing probabilistic algorithms.",
       "doi": "10.1109/TCSI.2024.3470318",
       "url": "https://doi.org/10.1109/TCSI.2024.3470318",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-81",
@@ -1979,14 +1901,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic mean circuits (SMCs) are at the core of mean filtering and neural networks, but they have not been fully investigated in stochastic computing (SC). In this brief, SMCs in the unipolar and bipolar formats are respectively proposed to average bitstreams. For this purpose, the unipolar and bipolar stochastic inner-product circuits (SIPCs) are first designed by using positively correlated bitstreams for multiplication and accumulation. These bitstreams are generated by sharing a random number source (RNS) among different stochastic number generators (SNGs) to lower hardware costs. Applications of the proposed designs in Gaussian filtering, edge detection, and mean filtering are implemented. Experimental results show that the proposed SIPCs and SMCs outperform previous designs in both hardware efficiency and computing accuracy.",
       "doi": "10.1109/TCSII.2023.3314692",
       "url": "https://doi.org/10.1109/TCSII.2023.3314692",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-82",
@@ -2003,14 +1924,13 @@
       ],
       "scope": "Fully parallel",
       "innovation": "",
+      "abstract": "The complex calculations of the low-density parity-check (LDPC) decoder result in significant energy and hardware consumption. To solve the challenge, this brief describes a fully parallel stochastic LDPC decoder with a two-stage shared memory (TSM) variable node (VN). To enhance cost efficiency, our design incorporates a shared low-cost random number generator (RNG) for all 2160 channels. We introduce a TSM VN function, which demonstrates faster convergence and reduced hardware overhead in comparison with the existing methods. We have taped out the (2160, 1760) stochastic LDPC decoder in the 55-nm process. The measure results exhibit that the proposed design achieves a throughput of 57.6 Gb/s, an efficiency of 33.68 Gb/s/mm2, and a power efficiency of 4.86 pJ/bit, underlining superior performance in terms of decoding throughput, hardware efficiency, and energy conservation.",
       "doi": "10.1109/TVLSI.2024.3488716",
       "url": "https://doi.org/10.1109/TVLSI.2024.3488716",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-83",
@@ -2027,14 +1947,13 @@
       ],
       "scope": "Convolutional neural network (CNN)",
       "innovation": "",
+      "abstract": "Compute-in-memory (CIM) is an emerging solution that embeds compute logic inside the memory array to achieve high energy efficiency and reduce memory access cost. However, current CIM solutions require bulky analog-to-digital converter (ADC)/digital-to-analog converters (DACs) that make the accelerator power hungry and unable to scale in the more advanced process with a low power supply. Stochastic computing (SC) is an attractive alternative digital compute scheme that uses tiny bit-serial logic, e.g., AND and OR, to perform the basic MAC operations on stochastic sequences. In this work, we propose a stochastic CIM (SCIM) approach that combines the benefits of SC and CIM accelerators. It eliminates the DACs/ADCs in CIM and adds CIM’s benefits to SC. We demonstrate a highly programmable convolutional neural network (CNN) accelerator that achieves up to 7.96-TOPS/W peak energy efficiency in 65 nm and inference accuracy comparable to 8-b fixed point.",
       "doi": "10.1109/JSSC.2025.3554554",
       "url": "https://doi.org/10.1109/JSSC.2025.3554554",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-84",
@@ -2051,14 +1970,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic circuits offer the benefits of small area and lower power consumption. However, as the bit width of the operands increases, the area and latency of stochastic circuits also need to increase exponentially to meet the precision requirements, resulting in a decrease in performance. This brief introduces a low-cost and high-speed parallel approximate stochastic computing multiplier (PASCM), which takes binary streams as both inputs and outputs. The PASCM is suitable for multiplication operations with multi-bit width. In order to further enhance the accuracy of the PASCM, an error compensation mechanism has been proposed. To verify the performance of PASCM, validation was conducted on FPGA. The experimental results indicate that the proposed design exhibits significant area and latency advantages among existing multipliers. Take 8-bit as an example, the PASCM shows a 48.33%, 18.61%, 45.74%, and 57.95% reduction in Look-Up Table (LUT), latency, power delay product (PDP), and area delay product (ADP), respectively, compared to the 8-bit precise binary multiplier implemented using an IP core. To further validate the design, the PASCM was constructed into Multiply-Accumulate units (MAC) and applied to several image processing algorithms on FPGA. The proposed multiplier showed excellent results in terms of peak signal-to-noise ratio (PSNR) and mean structural similarity index (MSSIM), with some algorithms achieving complete consistency with binary computation results, and the hardware performance also surpasses the most advanced designs.",
       "doi": "10.1109/TCSII.2025.3562199",
       "url": "https://doi.org/10.1109/TCSII.2025.3562199",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-85",
@@ -2075,14 +1993,13 @@
       ],
       "scope": "Batch normalization (BN)",
       "innovation": "",
+      "abstract": "Batch normalization (BN) has proven to be a critical component in speeding up the training of deep spiking neural networks in deep learning. However, conventional BN implementations face significant challenges in terms of excessive off-chip memory bandwidth requirements and complex circuit designs, hindering their applicability for on-chip training in spiking neural networks (SNNs). This article introduces a novel hybrid stochastic-binary computing BN engine (HBN) that strikes an optimal balance between computational efficiency and hardware resource utilization, enabling efficient on-chip learning for SNNs. While conventional binary-mode BN engines offer temporal efficiency, they demand substantial hardware resources. In contrast, stochastic computing (SC)-based BN approaches reduce hardware overhead but introduce latency penalties and necessitate additional random number generation (RNG) circuits. To overcome these limitations, we propose a hybrid architecture that seamlessly integrates binary and stochastic computing (SC) paradigms. Our co-designed methodology effectively balances computational latency and hardware footprint. This is achieved by a rounding-free SC multiplier unified with binary-circuit map ping, which eliminates latency and RNG overheads. Extensive validation across both static image datasets and neuromorphic datasets demonstrates that HBN maintains algorithmic fidelity while achieving unprecedented computational efficiency. Simulation results reveal 98.7% reduction in floating-point operations (FLOPs), 98.5% latency improvement, and 98.2% energy consumption reduction compared with conventional BN implementations. FPGA implementation on the ZCU102 platform demonstrates practical hardware advantages, including 74.9% reduction in look-up table (LUT) utilization, 83.6% decrease in flip-flop (FF) count, and 13.7% reduction in block RAM (BRAM) allocation. Notably, the design achieves 63.7% power reduction compared with state-of-the-art implementations while maintaining complete DSP-free operation.",
       "doi": "10.1109/TVLSI.2025.3602991",
       "url": "https://doi.org/10.1109/TVLSI.2025.3602991",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-86",
@@ -2099,14 +2016,13 @@
       ],
       "scope": "Bipolar stochastic number (Bi-SN)",
       "innovation": "",
+      "abstract": "In this article, a signed-digit hybrid stochastic number (SD-HSN), which combines the two-line bipolar stochastic number (TLB-SN) and the binary signed-digit (BSD) number, is proposed and discussed. As a bipolar format hybrid stochastic number (SN), SD-HSN extends the concept of conventional TLB-SN to a signed-digit stochastic stream. The positional-weight-based TLB-SNs are still a stochastic stream with BSD, which is computed according to the arithmetic of its expectation with the redundant number method. The multiplication by SD-HSN shows a high-computational performance thanks to the redundant SD-HSN circuit. The efficient multiply-accumulate (MAC) is implemented by SD-HSN designs with low area and low-power consumption. The fault tolerance mechanism of SD-HSN is demonstrated by a JPEG image compression algorithm and a neural network. Besides, SD-HSN shows its advantage in hardware cost and power consumption over conventional BSD number multiplication and its high accuracy, high efficiency, and low latency compared to the classic stochastic computing (SC) methods. The SD-HSN circuits proposed, which include a generator, adder, and multiplier, are designed and implemented based on a standard 40-nm CMOS process.",
       "doi": "10.1109/TVLSI.2025.3532948",
       "url": "https://doi.org/10.1109/TVLSI.2025.3532948",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-87",
@@ -2123,14 +2039,13 @@
       ],
       "scope": "Bitstream generator",
       "innovation": "",
+      "abstract": "This article proposes a tunable true random number generator (TTRNG) based on stochastic magnetic tunnel junction (MTJ) switching in the subcritical current regime. The proposed design consists of three parts. The first part is a write/read circuit featuring a static write circuit and an energy-efficient circuit optimized for read operations. The second finds the probability generation array (PGA) similar to the longest common subsequence (LCS) problem. However, the algorithms presented so far for the LCS have not been responsive to finding the Desired-PGA as it must look for the common subsequence among one million sequences, each sequence being 259 long. Hence, the convergence of those algorithms is impossible in this problem. Accordingly, we propose an algorithm to find a common subsequence of length 24, each defining a logic function. We also propose a controller to generate arbitrary probabilities with a zero steady-state error. These parts, especially PGA, make the design highly robust to the process variations. Notably, the proposed design passes the National Institute of Standards and Technology test. The proposed design also reduces energy dissipation compared to previous designs. Also, as it does not require precise sizing, the FinFET technology is appropriately used to design the proposed approach.",
       "doi": "10.1109/TCAD.2024.3446715",
       "url": "https://doi.org/10.1109/TCAD.2024.3446715",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-88",
@@ -2147,14 +2062,13 @@
       ],
       "scope": "Area efficient",
       "innovation": "",
+      "abstract": "Deep neural networks (DNNs) are widely used to handle various intelligent tasks. With the increased model size, the DNNs’ hardware accelerators are challenging the higher area overhead and energy consumption. Stochastic computing (SC) has recently been considered for implementing DNNs and reducing hardware consumption. However, many current SC-based DNN accelerators fail to balance accuracy, performance, and resource overhead. In addition, their limited scalability and flexibility restrict their use in edge devices. In this article, we design an area and energy-efficient DNN accelerator architecture using SC. We propose an SC-binary hybrid processing unit with piecewise shift compensation without significant additional hardware overhead increment to improve the SC accuracy. To balance performance and resource overhead, we conduct a design space exploration (DSE) from an overall architectural perspective. An experimental platform with both software and hardware for SC-based DNNs is established. The software simulation results demonstrate that the best accuracy of the designed SC-DNN on the CIFAR-10 is 91.9%, which is 3.2% higher than that of the previous SC-DNN work. The VLSI implementation of the hardware is synthesized using the TSMC 28-nm CMOS process. Results show that compared to the binary computing counterpart, our design achieves $2.7\\times $ area efficiency and $3.4\\times $ energy efficiency. Compared to other SC-DNN accelerator designs, our design can provide $5.3\\times $ area efficiency and $7.3\\times $ energy efficiency.",
       "doi": "10.1109/TVLSI.2025.3550786",
       "url": "https://doi.org/10.1109/TVLSI.2025.3550786",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-89",
@@ -2171,14 +2085,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is an unconventional computing paradigm that represents values using probabilities. This representation enables simple logic gates to perform complex arithmetic operations. This brief proposes two low hardware-cost stochastic mean circuits for even and odd inputs, respectively, along with a high-accuracy stochastic square root circuit. The circuits are designed by considering correlation technique and achieve excellent performance. Experimental results demonstrate that the proposed mean circuits surpass previous counterparts in computing accuracy and hardware cost. For instance, the proposed 9-input mean circuit can achieve at least an 86.7% reduction in mean square error (MSE) and a 28.6% reduction in area. For the square root circuit, the proposed design achieves a reduction in MSE of at least 19.6%. The proposed circuits are further demonstrated with the Niblack binarization algorithm, which shows superior performance of accuracy.",
       "doi": "10.1109/TCSII.2025.3560332",
       "url": "https://doi.org/10.1109/TCSII.2025.3560332",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-90",
@@ -2195,14 +2108,13 @@
       ],
       "scope": "Correlation manipulation",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is a reemerging computing paradigm that offers low-cost and noise-resilient hardware designs for a variety of arithmetic functions. In SC, circuits operate on uniform bit-streams, where the value is encoded by the probability of observing ‘1’s in the stream. The accuracy of SC operations highly depends on the correlation between input bit-streams. Some operations, such as minimum and maximum, require highly correlated inputs, whereas others like multiplication demand uncorrelated or statistically independent inputs for accurate results. Developing low-cost and accurate correlation manipulation circuits is critical, as they allow correlation management without incurring the high cost of bit-stream regeneration. This work introduces novel in-stream correlator and decorrelator circuits capable of: 1) adjusting correlation between stochastic bit-streams and 2) controlling the distribution of ‘1’s in the output bit-streams. Compared to state-of-the-art (SoA) approaches, our designs offer improved accuracy and reduced hardware overhead. The output bit-streams enjoy low-discrepancy (LD) distribution, leading to higher quality of results. To further increase the accuracy when dealing with pseudo-random inputs, we propose an enhancement module that balances the number of ‘1’s across adjacent input segments. We show the effectiveness of the proposed techniques through two application case studies: SC design of sorting and median filtering.",
       "doi": "10.1109/TVLSI.2025.3597779",
       "url": "https://doi.org/10.1109/TVLSI.2025.3597779",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-91",
@@ -2219,14 +2131,13 @@
       ],
       "scope": "Bayesian inference",
       "innovation": "",
+      "abstract": "Naïve Bayesian inference enables classification or prediction of an event given observations of potentially contradictory evidences, and is particularly intriguing in power-limited contexts where a neural network would be inappropriate. It has been demonstrated that Müller C-Elements (CEs), when applied within the stochastic computing paradigm, natively calculate Bayes’ theorem, which can be used to perform naïve Bayesian inference, enabling energy-efficient data fusion. However, this concept has never previously been demonstrated experimentally. We therefore report the first fabricated stochastic Bayesian inference engine implemented with CEs. Our measurements of four distinct CE structures experimentally demonstrate tradeoffs among accuracy, efficiency, robustness, and speed. Our chip achieves better power-delay product (PDP) than other proposed stochastic Bayesian engines with CEs, and is the first such chip to be fabricated.",
       "doi": "10.1109/TVLSI.2025.3591067",
       "url": "https://doi.org/10.1109/TVLSI.2025.3591067",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-92",
@@ -2243,14 +2154,13 @@
       ],
       "scope": "Stochastic computing (SC)",
       "innovation": "",
+      "abstract": "Stochastic Computing (SC), an emerging paradigm with advantages in hardware cost and fault tolerance, is well-suited for applications in image processing and information security. However, the existing SC paradigms suffer from significant hardware costs due to the conversion between binary and stochastic sequences, and the long latency caused by low computational parallelism. In this work, we demonstrate a Mixed-Signal Stochastic Computing-In-Memory (MS-SCIM) paradigm utilizing spin orbit torque magnetic random access memory (SOT-MRAM) arrays, in order to realize a energy-efficient and conversion-less SC method for the first time. The main contributions include: 1) The inherent stochastic switching behaviors of spintronic devices are exploited to enable the SOT-MRAM array to serve both as a parallel true random number generator (TRNG) and a CIM cell. 2) A high-parallelism mixed signal stochastic CIM paradigm is proposed to accelerate SC-based edge detection algorithm. The whole process achieves binary outputs without the conversion circuits and the energy efficiency achieves 446 Tops/W. 3) Based on the results of MS-SCIM, a novel image steganography method using stochastic bit streams is leveraged for information security, which enables lossless embedding and extraction of secret image information in a $156\\times 156$ size, enhancing both capacity and undetectability.",
       "doi": "10.1109/TCSI.2024.3501383",
       "url": "https://doi.org/10.1109/TCSI.2024.3501383",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-93",
@@ -2267,14 +2177,13 @@
       ],
       "scope": "Hybrid stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing is a promising technique for realizing high-performance computing owing to its extremely low hardware cost. However, the stochastic number (SN) has too many information redundancies, which leads to an exponential growth of latency. So, hybrid stochastic number (HSN) is proposed to solve the high-latency problem. Hybrid stochastic computing technology brings latency and efficiency advantages but faces the rigorous challenges of bit-width accumulation. In this study, a recoding method with high accuracy for HSN is proposed to reduce the bit width of HSN with only one clock delay. The hardware-resource savings in the polynomial circuit reach more than 80%. Then, the accuracy and fault tolerance of recoding are evaluated. The recoding method enables the pipeline structure in the pure HSN domain, preventing data conversion at the midpoint of the computation. Furthermore, based on the recoding method, a low-cost, bit-flip correction method for HSN is proposed, for realizing fault-tolerant data transmission and computation.",
       "doi": "10.1109/TCSI.2024.3492054",
       "url": "https://doi.org/10.1109/TCSI.2024.3492054",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-94",
@@ -2291,14 +2200,13 @@
       ],
       "scope": "Belief propagation (BP)",
       "innovation": "",
+      "abstract": "In this brief, a stochastic belief propagation (BP)-based iterative detection and decoding (IDD) for multiple-input and multiple-output (MIMO) system is proposed. We modify the algorithm of BP detection to make it more suitable for stochastic computation and enable the soft message to be transmitted between the detector and decoder in the format of stochastic sequences. Through IDD, the required number of iterations and quantization precision for the detector will decrease. By sharing the stochastic number generator, the hardware complexity of both the detector and decoder can be reduced. Hardware architectural optimizations and the corresponding implementation are also given, and we can implement $64\\times 32$ , four-QAM MIMO system with (128, 64) polar codes with $1.283~\\text {mm}^{2}$ area consumption. Compared with other detector, the hardware efficiency can be improved by 7.8 times.",
       "doi": "10.1109/TVLSI.2024.3477963",
       "url": "https://doi.org/10.1109/TVLSI.2024.3477963",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-95",
@@ -2315,14 +2223,13 @@
       ],
       "scope": "Neural networks",
       "innovation": "",
+      "abstract": "Human activity recognition (HAR) is a challenging area of research with widespread applications in human-computer interaction. Recent advances in neural networks (NNs) have greatly improved the methods of HAR feature extraction from wearable sensor data and increased the interest in their classification using NNs. While most prior work has relied on software implementations of NN-based HAR, we investigate for the first time hardware implementations for use in resource-constrained edge devices. Emerging edge and near-sensor systems must avoid costly communication with the cloud and perform complex classification tasks locally. This points to using low-area hardware technology such as stochastic computing (SC) and enhanced feature extraction methods such as wavelet transform (WT). We explore the wavelet-assisted stochastic-enabled neural network (WASENN) design for HAR. The NN types we consider are convolutional neural networks and long short-term memory networks. We study both partial and full versions of WASENN and evaluate their performance and resource utilization on the UCI HAR and WISDM datasets. Our hardware synthesis results show the superiority of the wavelet transform in accuracy and size. They also show that SC reduces area and power by 32% and 74% respectively with little impact on classification accuracy.",
       "doi": "10.1109/TCSI.2025.3540564",
       "url": "https://doi.org/10.1109/TCSI.2025.3540564",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-96",
@@ -2339,14 +2246,13 @@
       ],
       "scope": "Energy-efficient Ising machine",
       "innovation": "",
+      "abstract": "Qubit-based quantum annealing processors operate at ultra-low temperatures (15 mK) requiring enormous cooling energy. Consequently, there is a lot of interest in quantum Monte Carlo (QMC) algorithms that can be used to emulate quantum computing on classical machines. However, prior classical emulators implemented on CPUs, GPUs, or field-programmable gate arrays (FPGAs) are orders of magnitude slower than quantum annealers highlighting the need for dedicated application-specific integrated circuits (ASICs). Over the past decade, many ASICs have been developed, including general Ising solvers, typically implemented as digital system on chip (SoCs) targeting highly complex graphs, and specific Ising solvers, which address relatively simple Ising graphs using analog computing paradigms. General solvers often suffer from high power consumption, while specific solvers lack reconfigurability. This work presents, for the first time, a QMC algorithm implemented on a 3-D Ising computer fabricated in commercial 65-nm CMOS technology. Specifically, it solves a quantum problem in which a transverse field Ising (TFI) Hamiltonian is applied to an unconventional octagonal lattice. The reconfigurable integrated circuit (IC) also supports traditional 2-D Ising models for solving combinatorial optimization problems (COPs), offering better reconfigurability than prior specific Ising solvers. This IC achieved an energy-to-solution of $41.9~\\mu $ J at 1 MHz and $16.65~\\mu $ J at 10 MHz at 0.5 V for the QMC problem. Compared to previous FPGA implementations, this is a three-order-of-magnitude improvement and a six-order-of-magnitude improvement over CPU-based solutions. This article also proposes a new energy efficiency metric, $E_{\\text {ELOP}}$ (Energy per ELementary OPeration), to better benchmark p-bit-based Ising solvers. Our IC achieves an $E_{\\text {ELOP}}$ of 1350 fJ at 1 MHz and 535 fJ at 10 MHz (measured at 0.5 V) for solving the QMC problem, which are also equivalent to the energy efficiency of 0.74 and 1.87 TELOPS/W (ELementary OPeration per Second per Watt).",
       "doi": "10.1109/JSSC.2026.3699984",
       "url": "https://doi.org/10.1109/JSSC.2026.3699984",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-97",
@@ -2363,14 +2269,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) encodes real values via probabilistic bitstreams, enabling complex arithmetic operations to be realized by simple logic gates. However, the requirement of longer bitstreams to ensure computing accuracy leads to higher latency, partially offsetting the low-complexity advantage of SC. To address this, this work utilizes a dynamic truncation method for stochastic bitstreams, and designs an energy-efficient counter-based addition circuit (CBAC) through effective bit recognition and correlation. Further, a tree-structured cascading architecture is then used to perform multi-input addition computing. Experimental results demonstrate that the proposed CBAC outperforms the state-of-the-art designs. For instance, a 16-input configuration achieves at least 75.9% reduction in mean square error (MSE) and a more than 43.1% reduction in area. When applied to polynomial computation and Gaussian filtering, the proposed architecture exhibits superior accuracy and efficiency, delivering MSE reductions of at least 10.7% and area reductions exceeding 6.8%.",
       "doi": "10.1109/TCSII.2025.3642988",
       "url": "https://doi.org/10.1109/TCSII.2025.3642988",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-98",
@@ -2387,14 +2292,13 @@
       ],
       "scope": "skew number",
       "innovation": "",
+      "abstract": "Unary computing, whose core arithmetics (e.g., multiplication) require only simple logic gates, has enabled efficient DNN processing, especially on strictly power-constrained devices. However, unary computing still confronts the power efficiency bottleneck for buffering unary bitstreams. The buffering of unary bitstreams requires accumulating bits into large bitwidth binary numbers. The large bitwidth binary number needs to activate all bits per cycle in case of carry propagation. As a result, the accumulation process accounts for 32%-70% of the power budget. To push the boundary of power efficiency, we propose Cambricon-U, a systolic random increment memory architecture featuring efficient accumulation. By leveraging skew number data format, Cambricon-U only activates no more than three bits (instead of all bits) from each number per accumulating cycle. Experimental results show that Cambricon-U reduces 51% power on unary accumulation, and improves 1.18-1.45× energy efficiency over uSystolic, the SOTA unary computing scheme baseline, with -1.9%∼+0.77% area overhead. Further, we propose Cambricon-UX, which exploits bit-level sparsity in unary computing to save energy. Compared to Cambricon-U, Cambricon-UX achieves 1.28-2.54× energy efficiency.",
       "doi": "10.1109/TCAD.2026.3696809",
       "url": "https://doi.org/10.1109/TCAD.2026.3696809",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-99",
@@ -2411,14 +2315,13 @@
       ],
       "scope": "Energy-efficient",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) is widely used in image processing due to its low hardware cost. However, it suffers from high latency caused by long bit streams. Although many parallel stochastic multipliers have been proposed, they are often complex. This work proposes an energy-efficient, low-complexity parallel stochastic multiplier (ELPSM). The ELPSM performs and operations based on uniform allocation, achieving high precision. The resulting outputs correspond to the summation of binary partial products (PPs) through shifting and concatenation. A unified formula is presented to design the ELPSM for arbitrary bit widths based on these PPs. Furthermore, approximate parallel counters (APCs) are utilized to optimize the ELPSM. Both the ELPSM and its optimized variants are formulated for easy scalability to higher bit widths. After optimization, the proposed multiplier reduces delay, power-delay product (PDP), and area-delay product (ADP) by 29.16%, 51.27%, and 50.78%, respectively, compared to a 32-bit binary multiplier, while achieving improvements of 18.81%, 32.33%, and 27.65% over the state-of-the-art 32-bit designs, respectively. The design demonstrates excellent performance in image multiplication and neural network inference; even the APC-optimized variants incur at most 0.45% accuracy loss on benchmark models such as ResNet-18 without posttraining.",
       "doi": "10.1109/TVLSI.2026.3722919",
       "url": "https://doi.org/10.1109/TVLSI.2026.3722919",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-100",
@@ -2435,14 +2338,13 @@
       ],
       "scope": "Stochastic computing",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) encodes numerical values as long binary bitstreams and performs arithmetic through simple bitwise logic, making it naturally suited to processing-in-memory (PIM) architectures. A key bottleneck is the conversion from compact binary numbers to these long bitstreams, known as binary-to-stochastic (B2S) conversion. When this conversion is performed outside the memory array, the resulting bitstreams must be written back into DRAM, introducing data-movement overheads that dominate end-to-end energy and latency. This work presents a deterministic in-DRAM B2S framework that performs this conversion inside DRAM banks without modifying the 1T1C cell array or sense amplifiers (SAs). The design repurposes standard SAs to perform magnitude comparisons through a time-weighted wordline-activation mechanism, and employs deterministic threshold templates stored as static DRAM rows. A three-phase pipeline coordinates initialization, RowClone-based broadcast, and weighted comparison to generate column-parallel bitstream outputs across an activated row, scalable across banks. Evaluations show that the resulting bitstreams provide statistical properties and task-level accuracy comparable to Sobol sequences, a widely used high-quality reference in SC, across the tested bitstream lengths and workloads. System-level analysis indicates that generating bitstreams directly inside DRAM avoids the bandwidth cost of moving them across the memory channel, reducing end-to-end energy and latency by more than $2\\times $ relative to external CMOS-based generators in the evaluated configurations, and providing a latency advantage over binary in-DRAM PIM at low-to-moderate precisions. These results demonstrate a practical path toward DRAM-compatible SC.",
       "doi": "10.1109/TCSI.2026.3701420",
       "url": "https://doi.org/10.1109/TCSI.2026.3701420",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-101",
@@ -2459,14 +2361,13 @@
       ],
       "scope": "p-bit",
       "innovation": "",
+      "abstract": "Probabilistic-bit (p-bit) systems are promising computational platforms due to their potential for high energy efficiency, particularly when implemented using stochastic elements like low energy-barrier nanomagnets that exploit inherent thermal stochasticity. However, these stochastic elements are susceptible to getting stuck to a given state or transitioning too slowly due to faults arising during fabrication, ageing or other operational issues. This paper examines the impact of such faults on p-bit systems using a subset of the MNIST handwritten dataset as a case study and shows degraded system functionality due to such faults. To address these challenges, we propose a methodology based on mutual information to evaluate the criticality of individual p-bits in a network for a given application, quantifying their influence on system accuracy. Using the proposed criticality score (CS), we identify the most impactful p-bits and employ them in guiding fault-tolerance strategies. Additionally, we introduce the design of testable p-bits to detect faults in critical p-bits, validated through SPICE simulations using 14nm HP-FinFET technology. To further enhance fault resilience, we propose isolatable and fault-tolerant p-bits that help tackle accuracy loss caused by stuck-at faults. While these designs incur area overhead due to additional transistors, we can use the criticality score to replace only the most essential p-bits with fault-tolerant p-bits, minimizing unnecessary overhead while achieving desired fault-tolerance levels. Thus, this work demonstrates a comprehensive framework to develop fault-tolerance capabilities in a p-bit system implemented using stochastic elements susceptible to stuck-at faults.",
       "doi": "10.1109/TCSI.2025.3569769",
       "url": "https://doi.org/10.1109/TCSI.2025.3569769",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-102",
@@ -2483,14 +2384,13 @@
       ],
       "scope": "Artificial intelligence",
       "innovation": "",
+      "abstract": "Nonlinear functions are essential in signal processing, automatic control, and machine learning, serving as activation functions and enabling nonlinear space modeling. However, conventional hardware implementations, such as look-up tables (LUTs), Taylor series, and coordinate rotation digital computer (CORDIC), suffer from high overhead and limited generality. Stochastic computing (SC), a novel nonbinary computing approach, offers substantial advantages in circuit compactness and power efficiency. This article introduces a segmented multidriving multidimensional finite state machine (SMM-FSM) operator, which integrates input-space partitioning, affine normalization, and segment-specific parameter configuration to enable accurate and efficient approximation of complex and nonmonotonic univariate functions. Leveraging the Kolmogorov–Arnold (K–A) theorem, the SMM-FSM further supports multivariate nonlinear computation through the composition of univariate operators. The proposed scheme adopts a fully digital CMOS implementation, offering improved compatibility and ease of integration in practical scenarios. The results of multivariate function approximation indicate area reductions of $1.33\\times $ to $5.17\\times $ and power savings of $1.37\\times $ to $2.65\\times $ compared to traditional methods, with minimal accuracy degradation. Additionally, a knot classification circuit built using the proposed architecture significantly outperforms binary multilayer perceptron (MLP) implementations in area by $8.23 \\times $ , power by $3.34 \\times $ , and latency by $5.74 \\times $ , highlighting its efficiency and versatility.",
       "doi": "10.1109/TVLSI.2026.3662674",
       "url": "https://doi.org/10.1109/TVLSI.2026.3662674",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-103",
@@ -2507,14 +2407,13 @@
       ],
       "scope": "random number source (RNS)",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) generally suffers from long latency. One solution is to apply proper random number sources (RNSs) to generate the bit streams. However, existing RNS designs either have low accuracy or high hardware cost. To address this drawback, motivated by the fact that a uniform spatial distribution generally leads to high accuracy for an SC circuit, we propose a basic architecture to produce a uniform spatial distribution and a further detailed implementation of it. For the implementation, we further propose a method to optimize its hardware cost and an algorithm following a guiding principle to improve its accuracy. The method for hardware cost optimization allows hardware cost reduction while keeping the accuracy. Our experimental results show that the proposed implementation achieves both high accuracy and low hardware cost. For example, compared to a state-of-the-art stochastic number generator design, our design can reduce hardware cost by over 80%, while achieving higher accuracy.",
       "doi": "10.1109/TCAD.2025.3585800",
       "url": "https://doi.org/10.1109/TCAD.2025.3585800",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-104",
@@ -2531,14 +2430,13 @@
       ],
       "scope": "Dynamic stochastic computing (DSC)",
       "innovation": "",
+      "abstract": "Stochastic computing (SC) and dynamic stochastic computing (DSC) have demonstrated promising application prospects in various domains. However, one of their primary challenges lies in 1-bit computational accuracy issues, leading to prolonged latency and degraded hardware efficiency. To address this limitation, this article proposes a novel multibit variable representation and computing system, called stochastic symbol computing (SSC), to enhance computational accuracy while maintaining the same processing latency, thereby improving hardware efficiency. We first derive the optimal probability distribution and prove SSC maintains compatibility with both binary and stochastic circuits, while the result preserves stochastic symbols, enabling its use in complex processing chains. Hardware evaluation demonstrates that SSC brings substantial improvements: fundamental arithmetic units (e.g., multiplier, multiply-accumulate, and divider) achieve over $3\\times $ higher hardware efficiency compared to conventional SC. In complex applications, such as multiple-input multiple-output (MIMO) detection and neural network training, SSC reduces the required bit-width by 1–4 bits versus fixed-point counterparts at iso-accuracy, leading to a 44% improvement in overall hardware efficiency. These results confirm SSC as a high-efficiency, high-accuracy alternative for stochastic computing systems.",
       "doi": "10.1109/TVLSI.2026.3656566",
       "url": "https://doi.org/10.1109/TVLSI.2026.3656566",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     },
     {
       "id": "paper-105",
@@ -2555,14 +2453,13 @@
       ],
       "scope": "Probabilistic Computing",
       "innovation": "",
+      "abstract": "The primary objective of this work is to develop a compact and hardware-efficient methodology for constructing p-bit-based invertible logic circuits using Hamiltonian-based formulations, enabling scalable arithmetic circuit design and demonstrating their applicability to representative NP-hard optimization problems. This work presents the design of p-circuits using the energy function of logic gates. In particular, a three-input majority gate is presented with four p-bits. A weight and bias transformation technique is proposed to eliminate explicit NOT gates by multiplying the corresponding node entries of the weight and bias matrices by -1, without modifying the Hamiltonian. As an application, a three-input minority gate is implemented utilizing four p-bits only, designed using the proposed majority gate. Furthermore, a novel one-bit adder/subtractor is constructed using only six p-bits. The proposed design achieves a graph density of 0.73, whereas existing designs exhibit graph densities greater than 1. The proposed one-bit adder is extended to perform multi-bit addition. Specifically, a 32-bit addition on a p-circuit utilizes 161 p-bits. A 32-bit multiplier is constructed with the proposed adders with 374 p-bits and requires eight connections per node. Various simulations demonstrate the invertible nature of the proposed multiplier as an integer factorizer and division circuit. Moreover, this article explores solutions to a small set of NP-hard problems, such as the subset sum problem, partition problem, and knapsack problem, using the proposed p-circuits for adders and subtractors. Extensive simulations are performed for a small sample of these problems, and the results are presented.",
       "doi": "10.1109/TCAD.2026.3729920",
       "url": "https://doi.org/10.1109/TCAD.2026.3729920",
       "has_analysis": false,
       "has_pdf": false,
       "has_work": false,
-      "oa_status": "",
-      "github_dossier": null,
-      "github_work": null
+      "oa_status": ""
     }
   ]
 }
