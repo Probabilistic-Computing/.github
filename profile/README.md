@@ -12,22 +12,9 @@ Open **stochastic and probabilistic computing research**, a **learning portal** 
 
 ## Start Here
 
-- **[Probabilistic Computing Learning Portal](https://probabilistic-computing.github.io/public/)** — Fundamentals → encoding & correlation → hardware taxonomies (newcomer-friendly; DOI citations only).
+- **[Probabilistic Computing Leaßßrning Portal](https://probabilistic-computing.github.io/public/)** — Fundamentals → encoding & correlation → hardware taxonomies (newcomer-friendly; DOI citations only).
 - **[Interactive PC Paper Map](https://probabilistic-computing.github.io/.github/)** — Search, filter by research domain, and browse abstracts across 105+ curated stochastic / probabilistic computing papers with DOI links.
 - **[Organization profile repo](https://github.com/Probabilistic-Computing/.github)** — Public catalog source (`docs/papers.json`), Pages site, and this landing page.
-
----
-
-## Corpus snapshot
-
-| Metric | Value |
-|--------|------:|
-| Curated catalog entries | 105 |
-| Entries with publisher abstract | 105 |
-| Structured analysis notes | 10 |
-| Research domains | 8 |
-
-**Domains:** Neural Networks & Learning, Stochastic Arithmetic & Circuits, Coding & Communications, DSP & Imaging, Number Generators, Fault Tolerance & Reliability, Invertible & p-bit Logic, Foundations & Surveys
 
 ---
 
