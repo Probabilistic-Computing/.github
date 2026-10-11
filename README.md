@@ -2,6 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by/4.0/)
 [![GitHub Pages](https://img.shields.io/badge/Pages-PC%20Paper%20Map-181717?logo=github)](https://probabilistic-computing.github.io/.github/)
+[![PC Learn](https://img.shields.io/badge/Learn-PC%20Learning%20Portal-3949AB?logo=readthedocs&logoColor=white)](https://probabilistic-computing.github.io/public/)
 [![Corpus: 105+ Papers](https://img.shields.io/badge/Corpus-105%2B%20Papers-blue)](https://probabilistic-computing.github.io/.github/)
 
 [![Stars](https://img.shields.io/github/stars/Probabilistic-Computing/.github?style=flat&logo=github)](https://github.com/Probabilistic-Computing/.github/stargazers)
@@ -13,6 +14,7 @@ Special GitHub organization repository for **[Probabilistic-Computing](https://g
 - **Repository**: https://github.com/Probabilistic-Computing/.github
 - **Organization homepage**: https://github.com/Probabilistic-Computing
 - **Interactive paper map**: https://probabilistic-computing.github.io/.github/
+- **Learning portal**: https://probabilistic-computing.github.io/public/ ([`Probabilistic-Computing/public`](https://github.com/Probabilistic-Computing/public))
 - **License**: CC BY 4.0 (see [`LICENSE`](LICENSE))
 
 ## TL;DR
@@ -20,6 +22,7 @@ Special GitHub organization repository for **[Probabilistic-Computing](https://g
 - **Topic**: Stochastic computing (SC), probabilistic bits, invertible logic, and related IEEE circuits / CAD literature
 - **Total papers**: curated catalog with titles, authors, venues, DOIs, and publisher abstracts
 - **Modality**: Structured bibliographic database (`papers.json`), static org homepage (`profile/README.md`), and client-side web application (`docs/index.html`)
+- **Learning**: Separate public MkDocs curriculum at [`Probabilistic-Computing/public`](https://github.com/Probabilistic-Computing/public) (DOI citations only; no PDFs)
 - **Research domains**: Neural Networks & Learning, Coding & Communications, DSP & Imaging, Number Generators, Invertible & p-bit Logic, Fault Tolerance, Foundations & Surveys, Stochastic Arithmetic & Circuits
 - **Deployment**: Zero-dependency static site on GitHub Pages (Actions or `/docs` branch deploy)
 

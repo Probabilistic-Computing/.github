@@ -1,8 +1,9 @@
 # Probabilistic Computing Lab
 
-Open **stochastic and probabilistic computing research**, curated **SC / p-bit literature**, and an interactive **paper map** of 105+ peer-reviewed works — bridging bitstream arithmetic, invertible logic, and energy-efficient inference hardware.
+Open **stochastic and probabilistic computing research**, a **learning portal** for bitstream / p-bit hardware, and an interactive **paper map** of 105+ peer-reviewed works — bridging bitstream arithmetic, invertible logic, and energy-efficient inference hardware.
 
 [![GitHub Pages](https://img.shields.io/badge/Pages-PC%20Paper%20Map-181717?logo=github)](https://probabilistic-computing.github.io/.github/)
+[![PC Learn](https://img.shields.io/badge/Learn-PC%20Learning%20Portal-3949AB?logo=readthedocs&logoColor=white)](https://probabilistic-computing.github.io/public/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by/4.0/)
 [![Corpus: 105+ Papers](https://img.shields.io/badge/Corpus-105%2B%20Papers-blue)](https://probabilistic-computing.github.io/.github/)
 [![Org Followers](https://img.shields.io/github/followers/probabilistic-computing?label=followers&logo=github)](https://github.com/Probabilistic-Computing)
@@ -11,6 +12,7 @@ Open **stochastic and probabilistic computing research**, curated **SC / p-bit l
 
 ## Start Here
 
+- **[Probabilistic Computing Learning Portal](https://probabilistic-computing.github.io/public/)** — Fundamentals → encoding & correlation → hardware taxonomies (newcomer-friendly; DOI citations only).
 - **[Interactive PC Paper Map](https://probabilistic-computing.github.io/.github/)** — Search, filter by research domain, and browse abstracts across 105+ curated stochastic / probabilistic computing papers with DOI links.
 - **[Organization profile repo](https://github.com/Probabilistic-Computing/.github)** — Public catalog source (`docs/papers.json`), Pages site, and this landing page.
 
@@ -37,6 +39,8 @@ This organization profile repository provides:
 - `docs/index.html` — Interactive Paper Map (GitHub Pages).
 - `docs/papers.json` — Machine-readable catalog metadata (includes abstracts).
 - `.github/workflows/deploy-pages.yml` — Pages deployment.
+
+Learning curriculum lives in a public repo: [`public`](https://github.com/Probabilistic-Computing/public) ([site](https://probabilistic-computing.github.io/public/)). It does **not** host paper PDFs or private lab materials.
 
 > Do **not** hand-edit `profile/README.md` or `docs/papers.json`. Refresh with:
 > `python3 scripts/export_papers_catalog.py`
